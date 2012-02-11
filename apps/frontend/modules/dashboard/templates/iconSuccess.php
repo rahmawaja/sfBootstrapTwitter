@@ -323,4 +323,5 @@
     <li class="ui-state-default ui-corner-all"><i class="icon-resize-horizontal"></i></li>
 </ul>
 
-<div class="clear"></div>
+<br clear="all" />
+<br clear="all" />

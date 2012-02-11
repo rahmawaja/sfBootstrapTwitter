@@ -30,3 +30,6 @@ Cherchez ensuite dans votre IDE la chaîne "@EDIT". Celle-ci pointe tous les cha
 
 Quelques fixtures sont intégrées au projet. Vous pouvez vous connecter avec login = mdp = "admin"
 
+## Utilisation de LESS
+
+Il est possible de charger un less.js. Pour ma part j'utilise le soft SimpLESS pour le dév et n'envoie que les CSS pour la prod.

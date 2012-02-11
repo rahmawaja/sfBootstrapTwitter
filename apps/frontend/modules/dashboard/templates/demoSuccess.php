@@ -1,3 +1,18 @@
+<div class="alert fade in alert-error">
+    <a class="close" data-dismiss="alert" href="#">×</a>
+    <strong>Oh snap!</strong> Change this and that and try again.
+</div>
+<div class="alert fade in alert-success">
+    <a class="close" data-dismiss="alert" href="#">×</a>
+    <strong>Well done!</strong> You successfully read this alert message.
+</div>
+<div class="alert fade in alert-info">
+    <a class="close" data-dismiss="alert" href="#">×</a>
+    <strong>Heads up!</strong> This is an alert that needs your attention, but it’s not a huge priority just yet.
+</div>
+
+<hr>
+
 <ul class="breadcrumb">
 	<li><a href="#">Home</a> <span class="divider">/</span></li>
 	<li><a href="#">Library</a> <span class="divider">/</span></li>
@@ -68,25 +83,17 @@
 
 <hr>
 
-<div class="alert fade in">
-	<a class="close" data-dismiss="alert" href="#">×</a>
-	<strong>Holy guacamole!</strong> Best check yo self, you're not looking too good.
-</div>
-<div class="alert fade in alert-error">
-	<a class="close" data-dismiss="alert" href="#">×</a>
-	<strong>Oh snap!</strong> Change this and that and try again.
-</div>
-<div class="alert fade in alert-success">
-	<a class="close" data-dismiss="alert" href="#">×</a>
-	<strong>Well done!</strong> You successfully read this alert message.
-</div>
-<div class="alert fade in alert-info">
-	<a class="close" data-dismiss="alert" href="#">×</a>
-	<strong>Heads up!</strong> This is an alert that needs your attention, but it’s not a huge priority just yet.
-</div>
-
-<hr>
-
+<form class="well">
+    <label for="first_name">Prénom</label>
+    <input type="text" placeholder="Prénom"> <span class="help-inline">Associated help text!</span>
+    <label for="first_name">Nom</label>
+    <input type="text" placeholder="Nom">
+    <label class="checkbox">
+        <input type="checkbox"> Est majeur
+    </label>
+    <button type="submit" class="btn">Submit</button>
+</form>
+      
 <div class="hero-unit">
 	<span class="label">.btn</span>
 	<span class="label label-info">.btn-primary</span>
@@ -149,7 +156,9 @@
     	<input type="file" name="file" class="input-file">
     </form>
 
-	<div id="datepicker"></div>
+    <label>Date :</label>
+	<input type="text" class="datepicker">
+    
 </div>
 
 <br clear="all" />
@@ -246,12 +255,10 @@
 <br clear="all" />
 
 <script type="text/javascript">
-	// Datepicker
-	$('#datepicker').datepicker().children().show();
-
 	/* DataTables */
-	var oTable = $('#example').dataTable( {
-		"sDom": "<'row'<'length'l><'filter'f>r>t<'row'<'length'i><'length'p>>",
-		"oLanguage": { "sUrl": "/js/dataTables/jquery.dataTables-fr.js" }
-	} );
+    var oTable = $('#example').dataTable( {
+    	"sDom": "<'row'<'length'l><'filter'f>r>t<'row'<'length'i><'length'p>>",
+    	"oLanguage": { "sUrl": "/js/dataTables/jquery.dataTables-fr.js" },
+    	"bAutoWidth": false
+    } );
 </script>
