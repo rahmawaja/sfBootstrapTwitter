@@ -1,0 +1,27 @@
+<VirtualHost *:80>
+  ServerName www.DOMAINE.dev
+  DocumentRoot "PATH\TO\NOM_PROJET\web"
+  DirectoryIndex frontend_dev.php
+  <Directory "PATH\TO\NOM_PROJET\web">
+    AllowOverride All
+    Allow from All
+  </Directory>
+
+  Alias /sf PATH\TO\NOM_PROJET\lib\vendor\symfony\data\web\sf
+  <Directory "PATH\TO\NOM_PROJET\lib\vendor\symfony\data\web\sf">
+    AllowOverride All
+    Allow from All
+  </Directory>
+
+  <Directory "PATH\TO\NOM_PROJET/web">
+    AllowOverride All
+    Allow from All
+    <IfModule mod_rewrite.c>
+    	RewriteEngine On
+		RewriteRule ^$ index.html [QSA]
+		RewriteRule ^([^.]+)$ $1.html [QSA]
+		RewriteCond %{REQUEST_FILENAME} !-f
+		RewriteRule ^(.*)$ frontend_dev.php [QSA,L]
+    </IfModule>
+  </Directory>
+</VirtualHost>

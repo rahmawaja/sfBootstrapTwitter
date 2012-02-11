@@ -1,0 +1,132 @@
+@import "twitter/variables.less"; // Modify this for custom colors, font-sizes, etc
+@import "twitter/mixins.less";
+
+.corps{
+	padding-top: 50px;
+}
+
+@media (max-width: 980px) {
+	.corps{
+		padding-top: 0;
+	}
+}
+
+/* Datatables Twitter */
+
+.dataTables_wrapper{
+	.row{
+		margin: 0;
+	}
+	
+	.dataTables_length{
+		label {
+			float: left;
+			text-align: left;
+		}
+		
+		select {
+			display: inline;
+			width: 75px;
+		}
+	}
+	
+	.dataTables_filter {
+		label{
+			float: right;
+			margin: 0;
+		}
+		
+		input{
+			display: inline; 
+			margin: 0;
+		}
+	}
+	
+	.dataTables_info{
+		float: left;
+	}
+	
+	.dataTables_paginate {
+		float: right;
+		margin: 0;
+	}
+	
+	.paginate_disabled_previous, .paginate_disabled_next{
+		cursor: default;
+		margin-right: 10px;
+		opacity: 0.4;
+		
+		&:hover{
+			color: #0069D6;
+			text-decoration: none;
+		}
+	}
+	
+	.paginate_enabled_previous, .paginate_enabled_next{
+		cursor: pointer;
+		margin-right: 10px;
+	}
+	
+	table {
+		clear: both;
+		margin: 0 0 1em;
+		width: 100%;
+		
+		&.bordered{
+			border: 1px solid #DDD;
+		}
+		
+		thead{
+		 	input, select{
+				margin-bottom: 0;
+			}
+		}
+		
+		.header{
+			border-bottom: 1px solid #CCC;
+		}
+		
+		.headerSortUp, .headerSortDown{
+			background: rgba(141, 192, 219, 0.25);
+			position: relative;
+			text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+			
+			&:after{
+				.square(14px);
+				background: url('img/glyphicons-halflings.png');
+				content: "";
+				position: absolute;
+				right: 5px;
+				top: 10px;
+			}
+		}
+		
+		.headerSortUp:after{
+			background-position: -288px -120px;
+		} 
+		
+		.headerSortDown:after{
+			background-position: -313px -119px;
+		} 
+	}
+}
+
+.accordion-toggle{
+	&:hover{
+		color: #08C;
+		text-decoration: none;
+	}
+}
+
+/* DEBUG BAR */
+#sfWebDebug{
+	#sfWebDebugBar{
+		top: initial !important;
+		bottom: 0;
+		
+	}
+	
+	.sfWebDebugTop{
+		top: 42px !important;
+	}
+}

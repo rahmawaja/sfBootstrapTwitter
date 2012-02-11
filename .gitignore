@@ -1,0 +1,12 @@
+/.buildpath
+/.project
+/.settings
+/b.bat
+/c.bat
+/d.bat
+/config/propel.ini
+/config/databases.yml
+/cache/*
+/log
+/web/frontend_dev.php
+/web/uploads/

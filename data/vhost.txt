@@ -1,0 +1,27 @@
+<VirtualHost *:80>
+  ServerName www.sfbootstrap.dev
+  DocumentRoot "C:/Mes_Projets/sfBootstrap\web"
+  DirectoryIndex frontend_dev.php
+  <Directory "C:/Mes_Projets/sfBootstrap\web">
+    AllowOverride All
+    Allow from All
+  </Directory>
+
+  Alias /sf C:/Mes_Projets/sfBootstrap\lib\vendor\symfony\data\web\sf
+  <Directory "C:/Mes_Projets/sfBootstrap\lib\vendor\symfony\data\web\sf">
+    AllowOverride All
+    Allow from All
+  </Directory>
+
+  <Directory "C:/Mes_Projets/sfBootstrap/web">
+    AllowOverride All
+    Allow from All
+    <IfModule mod_rewrite.c>
+        RewriteEngine On
+        RewriteRule ^$ index.html [QSA]
+        RewriteRule ^([^.]+)$ $1.html [QSA]
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteRule ^(.*)$ frontend_dev.php [QSA,L]
+    </IfModule>
+  </Directory>
+</VirtualHost>

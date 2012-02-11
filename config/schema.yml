@@ -1,0 +1,213 @@
+propel:
+  _attributes:
+    package: lib.model
+    defaultIdMethod: native
+    
+  agency:
+    _attributes: { phpName: agency }
+    id:                      ~
+    code:                    { type: varchar(100), index: unique }
+    label:                   { type: varchar(100) }
+    address:                 { type: longvarchar }
+    
+  bill:  
+    _attributes: { phpName: bill }
+    id:                      ~
+    code:                    { type: varchar(100), index: unique }
+    billing_date:            { type: date }
+    billing_address:         { type: date }
+    site_id:                 { type: integer, foreignTable: site, foreignReference: id, required: true, onDelete: cascade }
+    nature:                  { type: integer } # 0 - Maintenance, 1 - Dépannage, 2 - Travaux
+    provenance:              { type: integer } # 0 - Intervention, 1 - CE, 2 - Devis
+    object:                  { type: varchar(255) }
+    price_no_tax:            { type: float } # Prix HT
+    price_tax:               { type: float } # Prix TTC
+    tax:                     { type: float }
+    operator_id:             { type: integer, foreignTable: operator, foreignReference: id, required: true, onDelete: cascade }
+    agency_id:               { type: integer, foreignTable: agency, foreignReference: id, required: true, onDelete: cascade }
+    status:                  { type: integer } # 0 - Brouillon, 1 - Facturée, 2 - Exportée
+    date_export:             { type: date }
+    deposit:                 { type: float } # Acompte
+    info:                    { type: longvarchar } # Texte d'accompagnement
+    
+  bill_item:  
+    _attributes: { phpName: billItem }
+    id:                      ~
+    bill_id:                 { type: integer, foreignTable: bill, foreignReference: id, required: true, onDelete: cascade }
+    item_id:                 { type: integer, foreignTable: item, foreignReference: id, required: true, onDelete: cascade }
+    
+  client:
+    _attributes: { phpName: client }
+    id:                      ~
+    user_id:                 { type: integer, foreignTable: sf_guard_user, foreignReference: id, required: true, onDelete: cascade }
+    code:                    { type: varchar(100), index: unique }
+    label:                   { type: varchar(100) } # Raison sociale : Etam
+    code_ape:                { type: varchar(100) }
+    account:                 { type: varchar(100), index: unique }
+    address:                 { type: longvarchar }
+    billing_address:         { type: longvarchar }
+    contact:                 { type: varchar(100) }
+    phone:                   { type: varchar(100) }
+    billing_phone:           { type: varchar(100) }
+    tax:                     { type: float }        # TVA
+    sales_account:           { type: varchar(100) }
+    purchase_account:        { type: varchar(100) }
+    means_payment:           { type: varchar(100) } # Mode de réglement
+    due_date_payment:        { type: integer }      # Échéance de paiement
+    intrastat:               { type: varchar(100) }
+    
+  contract:
+    _attributes: { phpName: contract }
+    id:                      ~
+    code:                    { type: varchar(100), index: unique }
+    client_id:               { type: integer, foreignTable: client, foreignReference: id, required: true, onDelete: cascade }
+    date_begin:              { type: date }
+    date_end:                { type: date }
+    date_sign:               { type: date } # Date de signature
+    date_terminate:          { type: date } # Date de résiliation
+    date_next_bill:          { type: date } # Date prochaine facture
+    total:                   { type: integer } # Total HT
+    is_current:              { type: boolean, default: 1 } # En cours ou résilié
+    
+  contract_installation:
+    _attributes: { phpName: contractInstallation }
+    id:                      ~
+    contract_id:             { type: integer, foreignTable: contract, foreignReference: id, required: true, onDelete: cascade }
+    installation_id:         { type: integer, foreignTable: installation, foreignReference: id, required: true, onDelete: cascade }
+    
+  devis:  
+    _attributes: { phpName: devis }
+    id:                      ~
+    code:                    { type: varchar(100), index: unique }
+    site_id:                 { type: integer, foreignTable: site, foreignReference: id, required: true, onDelete: cascade }
+    operator_id:             { type: integer, foreignTable: operator, foreignReference: id, required: true, onDelete: cascade }
+    intervention_id:         { type: integer, foreignTable: intervention, foreignReference: id, required: true, onDelete: cascade }
+    amount:                  { type: float } # Montant HT
+    object:                  { type: varchar(255) }
+    
+  equipment:
+    _attributes: { phpName: equipment }
+    id:                      ~
+    code:                    { type: varchar(100), index: unique }
+    brand:                   { type: varchar(100) }
+    model:                   { type: varchar(100) }
+  
+  installation:
+    _attributes: { phpName: installation }
+    id:                      ~
+    code:                    { type: varchar(100), index: unique }
+    label:                   { type: varchar(100) }
+    
+  installation_equipment:
+    _attributes: { phpName: installationEquipment }
+    id:                      ~
+    contract_id:             { type: integer, foreignTable: contract, foreignReference: id, required: true, onDelete: cascade }
+    equipment_id:            { type: integer, foreignTable: equipment, foreignReference: id, required: true, onDelete: cascade }
+    quantity:                { type: integer }
+    
+  intervention:
+    _attributes: { phpName: intervention }
+    id:                      ~
+    code:                    { type: varchar(100), index: unique }
+    site_id:                 { type: integer, foreignTable: site, foreignReference: id, required: true, onDelete: cascade }
+    technician_id:           { type: integer, foreignTable: technician, foreignReference: id, required: true, onDelete: cascade }
+    importance:              { type: integer } # 0 - Normal, 1 - Astreinte, 2 - Urgence
+    nature:                  { type: integer } # 0 - Maintenance, 1 - Dépannage, 2 - Travaux
+    provenance:              { type: integer } # 0 - Mail, 1 - Fax, 2 - Téléphone, 3 - Internet
+    is_current:              { type: boolean, default: 1 } # En cours ou soldé
+    date_passage:            { type: date }
+    date_planned:            { type: date }
+    symptome:                { type: longvarchar }
+    info:                    { type: longvarchar } # Informations pour les opératrices
+    created_at:              ~
+    
+  intervention_installation:
+    _attributes: { phpName: interventionInstallation }
+    id:                      ~
+    intervention_id:         { type: integer, foreignTable: intervention, foreignReference: id, required: true, onDelete: cascade }
+    installation_id:         { type: integer, foreignTable: installation, foreignReference: id, required: true, onDelete: cascade }
+  
+  item:
+    _attributes: { phpName: item }
+    id:                      ~
+    code:                    { type: varchar(100), index: unique }
+    label:                   { type: varchar(100) }
+    price_no_tax:            { type: float } # Prix HT
+  
+  operator:
+    _attributes: { phpName: operator }
+    id:                      ~
+    user_id:                 { type: integer, foreignTable: sf_guard_user, foreignReference: id, required: true, onDelete: cascade }
+    agency_id:               { type: integer, foreignTable: agency, foreignReference: id, required: true, onDelete: cascade }
+      
+  report:
+    _attributes: { phpName: report }
+    id:                      ~
+    intervention_id:         { type: integer, foreignTable: intervention, foreignReference: id, required: true, onDelete: cascade }
+    num_bt:                  { type: varchar(100) }
+    date_begin:              { type: date } # Date d'arrivée
+    date_end:                { type: date } # Date de fin
+    object:                   { type: varchar(100) }
+    file:                    { type: varchar(255) }
+      
+  round:
+    _attributes: { phpName: round }
+    id:                      ~
+    code:                    { type: varchar(100), index: unique }
+    label:                   { type: varchar(100) }
+    agency_id:               { type: integer, foreignTable: agency, foreignReference: id, required: true, onDelete: cascade }
+    technician_id:           { type: integer, foreignTable: technician, foreignReference: id, required: false, onDelete: setnull }
+    
+  round_site:
+    _attributes: { phpName: roundSite }
+    id:                      ~
+    round_id:                { type: integer, foreignTable: round, foreignReference: id, required: true, onDelete: cascade }
+    site_id:                 { type: integer, foreignTable: site, foreignReference: id, required: true, onDelete: cascade }
+      
+  sf_guard_user_profile:
+    _attributes: { phpName: sfGuardUserProfile }
+    id:                      ~
+    user_id:                 { type: integer, foreignTable: sf_guard_user, foreignReference: id, required: true, onDelete: cascade }
+    genre:                   { type: integer }
+    first_name:              { type: varchar(45) }
+    last_name:               { type: varchar(45) }
+    email:                   { type: varchar(100) }
+        
+  site:
+    _attributes: { phpName: site }
+    id:                      ~
+    user_id:                 { type: integer, foreignTable: sf_guard_user, foreignReference: id, required: true, onDelete: cascade }
+    code:                    { type: varchar(100), index: unique }
+    label:                   { type: varchar(100) } # Enseigne : Etam Lingerie
+    address:                 { type: longvarchar }
+    phone:                   { type: varchar(100) }
+    round_id:                { type: integer, foreignTable: round, foreignReference: id, required: false, onDelete: setnull }
+    technician_id:           { type: integer, foreignTable: technician, foreignReference: id, required: false, onDelete: setnull }
+    client_id:               { type: integer, foreignTable: client, foreignReference: id, required: true, onDelete: cascade }
+    info:                    { type: longvarchar } # Informations pour les opératrices
+    
+  site_contact:
+    _attributes: { phpName: siteContact }
+    id:                      ~
+    site_id:                 { type: integer, foreignTable: site, foreignReference: id, required: true, onDelete: cascade }
+    name:                    { type: varchar(100) }
+    fonction:                { type: varchar(100) }
+    phone:                   { type: varchar(100) }
+    
+  site_installation:
+    _attributes: { phpName: siteInstallation }
+    id:                      ~
+    site_id:                 { type: integer, foreignTable: site, foreignReference: id, required: true, onDelete: cascade }
+    installation_id:         { type: integer, foreignTable: installation, foreignReference: id, required: true, onDelete: cascade }
+               
+  technician:
+    _attributes: { phpName: technician }
+    id:                      ~
+    user_id:                 { type: integer, foreignTable: sf_guard_user, foreignReference: id, required: true, onDelete: cascade }
+    
+  timeline:
+    _attributes: { phpName: timeline }
+    id:                      ~
+    intervention_id:         { type: integer, foreignTable: intervention, foreignReference: id, required: true, onDelete: cascade }
+    report_id:               { type: integer, foreignTable: report, foreignReference: id, required: false, onDelete: setnull }
+    status:                  { type: integer } # 0 - Affecté, 1 - Réaffecté, 2 - Rapport

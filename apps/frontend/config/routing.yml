@@ -1,0 +1,11 @@
+homepage:
+  url:   /
+  param: { module: dashboard, action: index }
+  
+demo:
+  url: /demo
+  param: { module: dashboard, action: demo }
+  
+icon:
+  url: /icons
+  param: { module: dashboard, action: icon }

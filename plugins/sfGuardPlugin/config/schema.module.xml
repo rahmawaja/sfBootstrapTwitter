@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<orm-designer version="1.4.6.488">
+
+  <module import-format="PropelYml" import-path="schema.yml" name="sfGuardPlugin" visBkColor="15987704" visSizeX="44" visSizeX2="590" visSizeY="0" visSizeY2="389">
+    <table name="sf_guard_group" visPositionX="345" visPositionY="31" visSizeX="0" visSizeX2="131" visSizeY="0" visSizeY2="59">
+      <column auto-increment="true" name="id" primary="true" required="true" type="integer"/>
+      <column name="name" required="true" size="255" type="varchar">
+        <orm-properties>
+          <attribute name="index">unique</attribute>
+        </orm-properties>
+      </column>
+      <column name="description" type="longvarchar"/>
+      <orm-properties>
+        <attribute name="phpName">sfGuardGroup</attribute>
+      </orm-properties>
+    </table>
+    <table name="sf_guard_permission" visPositionX="-22" visPositionY="31" visSizeX="0" visSizeX2="131" visSizeY="0" visSizeY2="59">
+      <column auto-increment="true" name="id" primary="true" required="true" type="integer"/>
+      <column name="name" required="true" size="255" type="varchar">
+        <orm-properties>
+          <attribute name="index">unique</attribute>
+        </orm-properties>
+      </column>
+      <column name="description" type="longvarchar"/>
+      <orm-properties>
+        <attribute name="phpName">sfGuardPermission</attribute>
+      </orm-properties>
+    </table>
+    <table name="sf_guard_group_permission" visPositionX="151" visPositionY="38" visSizeX="0" visSizeX2="140" visSizeY="0" visSizeY2="45">
+      <column name="group_id" primary="true" required="true" type="integer"/>
+      <column name="permission_id" primary="true" required="true" type="integer"/>
+      <orm-properties>
+        <attribute name="phpName">sfGuardGroupPermission</attribute>
+      </orm-properties>
+    </table>
+    <table name="sf_guard_user" visPositionX="24" visPositionY="224" visSizeX="0" visSizeX2="134" visSizeY="0" visSizeY2="143">
+      <column auto-increment="true" name="id" primary="true" required="true" type="integer"/>
+      <column name="username" required="true" size="128" type="varchar">
+        <orm-properties>
+          <attribute name="index">unique</attribute>
+        </orm-properties>
+      </column>
+      <column default="sha1" name="algorithm" required="true" size="128" type="varchar"/>
+      <column name="salt" required="true" size="128" type="varchar"/>
+      <column name="password" required="true" size="128" type="varchar"/>
+      <column name="created_at" type="timestamp"/>
+      <column name="last_login" type="timestamp"/>
+      <column default="1" name="is_active" required="true" type="boolean"/>
+      <column default="0" name="is_super_admin" required="true" type="boolean"/>
+      <orm-properties>
+        <attribute name="phpName">sfGuardUser</attribute>
+      </orm-properties>
+    </table>
+    <table name="sf_guard_user_permission" visPositionX="-23" visPositionY="126" visSizeX="0" visSizeX2="132" visSizeY="0" visSizeY2="45">
+      <column name="user_id" primary="true" required="true" type="integer"/>
+      <column name="permission_id" primary="true" required="true" type="integer"/>
+      <orm-properties>
+        <attribute name="phpName">sfGuardUserPermission</attribute>
+      </orm-properties>
+    </table>
+    <table name="sf_guard_user_group" visPositionX="356" visPositionY="128" visSizeX="0" visSizeX2="109" visSizeY="0" visSizeY2="45">
+      <column name="user_id" primary="true" required="true" type="integer"/>
+      <column name="group_id" primary="true" required="true" type="integer"/>
+      <orm-properties>
+        <attribute name="phpName">sfGuardUserGroup</attribute>
+      </orm-properties>
+    </table>
+    <table name="sf_guard_remember_key" visPositionX="239" visPositionY="259" visSizeX="0" visSizeX2="148" visSizeY="0" visSizeY2="73">
+      <column name="user_id" primary="true" required="true" type="integer"/>
+      <column name="remember_key" size="32" type="varchar"/>
+      <column name="ip_address" primary="true" size="50" type="varchar"/>
+      <column name="created_at" type="timestamp"/>
+      <orm-properties>
+        <attribute name="phpName">sfGuardRememberKey</attribute>
+      </orm-properties>
+    </table>
+    <orm-properties>
+      <attribute name="package">plugins.sfGuardPlugin.lib.model</attribute>
+    </orm-properties>
+    <foreign-key from="sf_guard_group_permission" name="FK_sf_guard_group_permission_sf_guard_group_id" to="sf_guard_group">
+      <foreign-key-column from="group_id" to="id"/>
+      <orm-properties>
+        <attribute name="onDelete">cascade</attribute>
+      </orm-properties>
+    </foreign-key>
+    <foreign-key from="sf_guard_group_permission" name="FK_sf_guard_group_permission_sf_guard_permission_id" to="sf_guard_permission">
+      <foreign-key-column from="permission_id" to="id"/>
+      <orm-properties>
+        <attribute name="onDelete">cascade</attribute>
+      </orm-properties>
+    </foreign-key>
+    <foreign-key from="sf_guard_user_permission" name="FK_sf_guard_user_permission_sf_guard_user_id" to="sf_guard_user" visCenterX="0" visCenterY="-1">
+      <foreign-key-column from="user_id" to="id"/>
+      <orm-properties>
+        <attribute name="onDelete">cascade</attribute>
+      </orm-properties>
+    </foreign-key>
+    <foreign-key from="sf_guard_user_permission" name="FK_sf_guard_user_permission_sf_guard_permission_id" to="sf_guard_permission">
+      <foreign-key-column from="permission_id" to="id"/>
+      <orm-properties>
+        <attribute name="onDelete">cascade</attribute>
+      </orm-properties>
+    </foreign-key>
+    <foreign-key from="sf_guard_user_group" name="FK_sf_guard_user_group_sf_guard_user_id" to="sf_guard_user">
+      <foreign-key-column from="user_id" to="id"/>
+      <orm-properties>
+        <attribute name="onDelete">cascade</attribute>
+      </orm-properties>
+    </foreign-key>
+    <foreign-key from="sf_guard_user_group" name="FK_sf_guard_user_group_sf_guard_group_id" to="sf_guard_group">
+      <foreign-key-column from="group_id" to="id"/>
+      <orm-properties>
+        <attribute name="onDelete">cascade</attribute>
+      </orm-properties>
+    </foreign-key>
+    <foreign-key from="sf_guard_remember_key" name="FK_sf_guard_remember_key_sf_guard_user_id" to="sf_guard_user">
+      <foreign-key-column from="user_id" to="id"/>
+      <orm-properties>
+        <attribute name="onDelete">cascade</attribute>
+      </orm-properties>
+    </foreign-key>
+  </module>
+
+</orm-designer>
