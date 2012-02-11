@@ -3,22 +3,22 @@ default:
     content-type: text/html
 
   metas:
-    title:        E3 Climatique
-    description:  Société d'installation de Climatisation, Ventilation et Chauffage
+    title:        sfBootstrap # @EDIT
+    description:  Bootstrap Symfony/Twitter 2.0  # @EDIT
     language:     fr
 
   stylesheets:
     - jq-theme/jquery-ui-1.8.16.custom.css
     - twitter/bootstrap.css
     - file-input/enhanced.css
-    - custom.css
+    - style.css
     
   javascripts:
     - jq-theme/jquery-ui-1.8.16.custom.min.js
     - twitter/bootstrap.min.js
     - file-input/enhance.min.js
     - file-input/fileinput.jquery.js
-    - jquery.dataTables.min.js
+    - dataTables/jquery.dataTables.min.js
     - script.js
 
   has_layout:     true

@@ -3,9 +3,9 @@
 /**
  * Project filter form base class.
  *
- * @package    museegien
+ * @package    sfbootstrap
  * @subpackage filter
- * @author     Your name here
+ * @author     Michel Parpaillon
  */
 abstract class BaseFormFilterPropel extends sfFormFilterPropel
 {

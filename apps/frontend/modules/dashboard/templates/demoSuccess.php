@@ -252,6 +252,6 @@
 	/* DataTables */
 	var oTable = $('#example').dataTable( {
 		"sDom": "<'row'<'length'l><'filter'f>r>t<'row'<'length'i><'length'p>>",
-		"oLanguage": { "sUrl": "/dataTables/jquery.dataTables-fr.js" }
+		"oLanguage": { "sUrl": "/js/dataTables/jquery.dataTables-fr.js" }
 	} );
 </script>

@@ -14,11 +14,11 @@ dev:
 all:
   .settings:
     # Form security secret (CSRF protection)
-    csrf_secret:            CSRF_SECRET
+    csrf_secret:            81daab74248c7a9ea2b510650499ad693f85963a # @EDIT
     
     # Set default Timezone
     default_timezone:       Europe/Paris
-    default_culture:        fr_FR
+    default_culture:        fr
 
     # Output escaping settings
     escaping_strategy:      true
@@ -26,17 +26,12 @@ all:
 
     # Enable the database manager
     use_database:           true
-    enabled_modules:        [default, sfGuardAuth]
-    standard_helpers:       [Partial, jQuery, Date, Less]
     
-    jquery_core:            jquery-1.6.4.min.js
+    # load Jquery core
+    jquery_core:            jquery-1.7.1.min.js
+    jquery_web_dir:         /sfJqueryReloadedPlugin
     
-  .actions:
-    login_module:           sfGuardAuth
-    login_action:           signin
-     
-    secure_module:          sfGuardAuth
-    secure_action:          secure
-
-    error_404_module:       main
-    error_404_action:       error404
+    enabled_modules:        [default, sfGuardAuth, sfGuardRegister]
+    standard_helpers:       [Partial, jQuery, Date]
+    
+    charset:                utf-8

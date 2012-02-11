@@ -15,7 +15,7 @@
 		<?php include_javascripts() ?>
 	</head>
 	<body>
-		<?php include_partial("dashboard/menu") ?>
+		<?php include_partial("main/menu") ?>
 		<div class="container-fluid corps">
 			<div class="content">
 				<?php echo $sf_content ?>

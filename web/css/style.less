@@ -11,6 +11,33 @@
 	}
 }
 
+.clear{
+    clear: both;
+}
+
+.icons-group{
+    display: block;
+    margin: 0;
+    
+    li{
+        margin: 2px;
+        position: relative;
+        padding: 4px 0;
+        cursor: pointer;
+        float: left;
+        list-style: none;
+        
+        .ui-icon {
+            float: left;
+            margin: 0 4px;
+        }
+        
+        i{
+            margin: 1px 4px 0;
+        }
+    }
+}
+
 /* Datatables Twitter */
 
 .dataTables_wrapper{
@@ -115,18 +142,5 @@
 	&:hover{
 		color: #08C;
 		text-decoration: none;
-	}
-}
-
-/* DEBUG BAR */
-#sfWebDebug{
-	#sfWebDebugBar{
-		top: initial !important;
-		bottom: 0;
-		
-	}
-	
-	.sfWebDebugTop{
-		top: 42px !important;
 	}
 }

@@ -5,8 +5,8 @@
             <datasource id="propel">
                 <adapter>mysql</adapter>
                 <connection>
-                    <dsn>mysql:host=localhost;dbname=e3</dsn>
-                    <user>e3</user>
+                    <dsn>mysql:host=localhost;dbname=sfBootstrap</dsn>
+                    <user>sfBootstrap</user>
                     <password></password>
                 </connection>
             </datasource>

@@ -1,11 +1,17 @@
-homepage:
-  url:   /
-  param: { module: dashboard, action: index }
-  
 demo:
-  url: /demo
+  url: /demonstration
   param: { module: dashboard, action: demo }
   
 icon:
-  url: /icons
+  url: /icones
   param: { module: dashboard, action: icon }
+  
+## Default routes ##
+
+sf_guard_signout:
+  url:   /deconnexion
+  param: { module: sfGuardAuth, action: signout }
+
+homepage:
+  url:   /
+  param: { module: dashboard, action: index }

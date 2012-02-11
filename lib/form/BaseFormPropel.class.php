@@ -3,9 +3,9 @@
 /**
  * Project form base class.
  *
- * @package    museegien
+ * @package    sfbootstrap
  * @subpackage form
- * @author     Your name here
+ * @author     Michel Parpaillon
  */
 abstract class BaseFormPropel extends sfFormPropel
 {

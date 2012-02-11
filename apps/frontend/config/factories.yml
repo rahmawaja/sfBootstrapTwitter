@@ -22,34 +22,19 @@ prod:
     param:
       send_http_headers: false
 
-preprod:
-  mailer:
-    param:
-      delivery_strategy: realtime
-      logging:           %SF_LOGGING_ENABLED%
-      charset:           %SF_CHARSET%
-      transport:
-        class: Swift_SmtpTransport
-        param:
-          host:       localhost
-          port:       25
-          encryption: ~
-          username:   ~
-          password:   ~
-
 dev:
   mailer:
     param:
-      delivery_strategy: single_address
-      delivery_address:  EMAIL_ADDRESS
+      delivery_strategy: single_address # Redirige tous les envois de mail de l'appli vers l'adresse renseignée en dessous
+      delivery_address:  ~ # @EDIT
       transport:
         class: Swift_SmtpTransport
         param:
           host:       smtp.gmail.com
           port:       465
           encryption: ssl
-          username:   USERNAME
-          password:   PASSWORD
+          username:   ~ # @EDIT
+          password:   ~ # @EDIT
   logger:
     class: sfAggregateLogger
     param:

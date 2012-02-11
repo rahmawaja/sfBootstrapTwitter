@@ -18,49 +18,15 @@
 
 ## Utilisation
 
-Cloner le repo Github de façon récursive (pour récupérer les submodules)
+Clonez le repo Github de façon récursive (pour récupérer les submodules)
 
-	git clone --recursive git@github.com:pixel-cookers/symfony_bootstrap.git
+	git clone --recursive ...
 
-Créer la BDD du projet et l'utilisateur associé
+Créez la BDD du projet et l'utilisateur associé
 
-Copier le fichier `/data/install/propel.ini` dans `/config`
+Cherchez ensuite dans votre IDE la chaîne "@EDIT". Celle-ci pointe tous les champs nécessitant une saisie.
 
-Saisir les champs du fichier `/config/propel.ini`
+## Connexion
 
-	propel.project = NOM_PROJET
-	propel.database.url = mysql:host=localhost;dbname=NOM_BDD
-	propel.database.user = NOM_USER_BDD
-	propel.output.dir = PATH\TO\NOM_PROJET
+Quelques fixtures sont intégrées au projet. Vous pouvez vous connecter avec login = mdp = "admin"
 
-Copier le fichier `/data/install/databases.yml` dans `/config`
-
-Saisir les champs du fichier `/config/databases.yml`
-
-	dsn : 'mysql:host=localhost;dbname=NOM_BDD'
-	username : NOM_USER
-
-Copier le fichier `/data/install/vhost.txt` dans `/data`
-
-Editer le fichier `\data\vhost.txt`
-
-Inclure celui-ci dans votre config Apache (httpd.conf)  :
-
-	# NOM_PROJET
-	Include "PATH\NOM_PROJET\data\vhost.txt"
-
-Ajouter le domaine associé dans votre fichier host :
-
-	127.0.0.X          www.DOMAINE.dev
-
-Copier les fichiers settings.yml, app.yml et factories.yml depuis `/data/install/` dans `/apps/frontend/config`
-
-Saisir le champs remember_cookie_name dans `/frontend/config/app.yml`
-
-Saisir le champs delivery_address dans `/frontend/config/factories.yml` pour recevoir les mails envoyés par l'application en environnement de dév
-
-Remplacer les champs username et password du mailer dans `/frontend/config/factories.yml` par vos login et mdp pour l'envoi de mail en dév
-
-Saisir le champs csrf_secret dans `/frontend/config/settings.yml`
-
-Redémarrer Wamp et tester l'url "www.DOMAINE.dev"
