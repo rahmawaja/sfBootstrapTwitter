@@ -24,8 +24,8 @@ class PluginsfGuardFormRegister extends BaseForm
     ));
 
     $this->validatorSchema->setPostValidator(new sfValidatorAnd(array(
-      new sfValidatorSchemaCompare('password', sfValidatorSchemaCompare::EQUAL, 'password_confirm', array(), array('invalid' => 'The two passwords do not match')),
-      new sfValidatorPropelUnique(array('trim' => true, 'model' => 'sfGuardUser', 'column' => array('username')), array('invalid' => 'This username already exists. Please choose another one.')),
+        new sfValidatorSchemaCompare('password', sfValidatorSchemaCompare::EQUAL, 'password_confirm', array(), array('invalid' => 'Les deux mots de passe ne correspondent pas')),
+        new sfValidatorPropelUnique(array('trim' => true, 'model' => 'sfGuardUser', 'column' => array('username')), array('invalid' => 'Ce Login est déjà pris. Choisissez en un autre')),
     )));
 
     $this->widgetSchema->setNameFormat('register[%s]');

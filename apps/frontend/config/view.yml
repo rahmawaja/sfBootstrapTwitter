@@ -4,7 +4,7 @@ default:
 
   metas:
     title:        sfBootstrap # @EDIT
-    description:  Bootstrap Symfony/Twitter 2.0  # @EDIT
+    description:  Bootstrap Symfony/Twitter 2.0 # @EDIT
     language:     fr
 
   stylesheets:
