@@ -4,9 +4,6 @@
 /b.bat
 /c.bat
 /d.bat
-/config/propel.ini
-/config/databases.yml
-/cache/*
+/apps/frontend/config/factories.yml
+/cache
 /log
-/web/frontend_dev.php
-/web/uploads/

@@ -70,19 +70,6 @@
 
 <hr>
 
-<div class="alert alert-block alert-error fade in">
-	<a class="close" data-dismiss="alert" href="#">×</a>
-	<h4 class="alert-heading">Erreur(s)</h4>
-	<p>
-		<ul>
-			<li>Champs invalide</li>
-			<li>Champs requis</li>
-		</ul>
-	</p>
-</div>
-
-<hr>
-
 <form class="well">
     <label for="first_name">Prénom</label>
     <input type="text" placeholder="Prénom"> <span class="help-inline">Associated help text!</span>

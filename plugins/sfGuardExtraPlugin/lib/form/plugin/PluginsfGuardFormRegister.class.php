@@ -17,10 +17,10 @@ class PluginsfGuardFormRegister extends BaseForm
     ));
 
     $this->setValidators(array(
-      'username'         => new sfValidatorString(array('trim' => true), array('required' => 'Your username is required.')),
-      'email'            => new sfValidatorEmail(array('trim' => true), array('required' => 'Your e-mail address is required.', 'invalid' => 'The email address is invalid.')),
-      'password'         => new sfValidatorString(array('min_length' => 8), array('min_length' => 'Password is too short (%min_length% characters min).', 'required' => 'Your password is required.')),
-      'password_confirm' => new sfValidatorString(array(), array('required' => 'Your password confirmation is required.')),
+      'username'         => new sfValidatorString(array('trim' => true), array('required' => 'Le login est requis.')),
+      'email'            => new sfValidatorEmail(array('trim' => true), array('required' => 'L\'adresse email est requise.', 'invalid' => 'L\'adresse email est invalide.')),
+      'password'         => new sfValidatorString(array('min_length' => 8), array('min_length' => 'Mot de passe trop court (%min_length% caractères minimumu).', 'required' => 'Le mot de passe est requis.')),
+      'password_confirm' => new sfValidatorString(array(), array('required' => 'Confirmation du mot de passe requise.')),
     ));
 
     $this->validatorSchema->setPostValidator(new sfValidatorAnd(array(
@@ -29,5 +29,9 @@ class PluginsfGuardFormRegister extends BaseForm
     )));
 
     $this->widgetSchema->setNameFormat('register[%s]');
+    
+    $this->widgetSchema['username']->setLabel("Login");
+    $this->widgetSchema['password']->setLabel("Mot de passe");
+    $this->widgetSchema['password_confirm']->setLabel("Confirmation");
   }
 }
