@@ -10,4 +10,4 @@ propel:
     genre:                   { type: integer }
     first_name:              { type: varchar(45) }
     last_name:               { type: varchar(45) }
-    email:                   { type: varchar(100) }
+    email:                   { type: varchar(100), index: unique }

@@ -31,7 +31,7 @@ all:
     jquery_core:            jquery-1.7.1.min.js
     jquery_web_dir:         /sfJqueryReloadedPlugin
     
-    enabled_modules:        [default, sfGuardAuth, sfGuardRegister]
+    enabled_modules:        [default, sfGuardAuth, sfGuardRegister, sfGuardForgotPassword]
     standard_helpers:       [Partial, jQuery, Date]
     
     charset:                utf-8

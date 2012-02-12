@@ -18,4 +18,7 @@
     </div>
     <input type="submit" class="btn" value="Connexion" />
     <?php echo link_to("Inscription", "@sf_guard_register") ?>
+    <p>
+        <?php echo link_to("Mot de passe oublié ?", "@sf_guard_password") ?>
+    </p>
 </form>

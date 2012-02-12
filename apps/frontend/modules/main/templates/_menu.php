@@ -1,13 +1,13 @@
 <div class="navbar navbar-fixed-top">
 	<div class="navbar-inner">
 		<div class="container-fluid">
-			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</a>
 			<?php echo link_to("sfBootstrap", "@homepage", array("class" => "brand")) ?>
             <?php if($sf_user->isAuthenticated()){ ?>
+    			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+    				<span class="icon-bar"></span>
+    				<span class="icon-bar"></span>
+    				<span class="icon-bar"></span>
+    			</a>
     			<div class="nav-collapse">
     				<ul class="nav">
     					<li <?php echo $sf_context->getActionName() == "index" ? "class='active'" : "" ?>>

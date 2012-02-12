@@ -4,3 +4,12 @@ all:
     success_signout_url:          sfGuardAuth/signin
     remember_key_expiration_age:  2592000 # 30 jours
     remember_cookie_name:         sfBootstrapRememberMe # @EDIT
+  sf_guard_extra_plugin:
+    mail_from:        noreply@example.org # @EDIT
+    name_from:        noreply # @EDIT
+    subject_confirm:  Confirmation de votre inscription # @EDIT
+    subject_complete: Request complete # @EDIT
+    subject_request:  Demande de réinitialisation du mot de passe # @EDIT
+    subject_success:  Mot de passe réinitialisé avec succès # @EDIT
+    reset_type:       set # @EDIT
+    send_password:    false # @EDIT true pour envoyer en clair par mail le login et mot de passe de l'utilisateur 

@@ -1,24 +1,32 @@
-<div class="alert fade in alert-error">
-    <a class="close" data-dismiss="alert" href="#">×</a>
-    <strong>Oh snap!</strong> Change this and that and try again.
-</div>
+<h1>Notifications (setFlash Symfony)</h1>
+
 <div class="alert fade in alert-success">
     <a class="close" data-dismiss="alert" href="#">×</a>
-    <strong>Well done!</strong> You successfully read this alert message.
+    <strong>Notice !</strong> Vous avez réussi à lire ce message.
+</div>
+<div class="alert fade in alert-error">
+    <a class="close" data-dismiss="alert" href="#">×</a>
+    <strong>Notice_error !</strong> Changez ça et ça et reessayez.
 </div>
 <div class="alert fade in alert-info">
     <a class="close" data-dismiss="alert" href="#">×</a>
-    <strong>Heads up!</strong> This is an alert that needs your attention, but it’s not a huge priority just yet.
+    <strong>Notice_information !</strong> Ce texte attire votre attention sur quelque chose.
 </div>
 
-<hr>
-
+<h1>Breadcrumb (Fil d'ariane)</h1>
+<p>
+    Pour générer un Breadcrumb sous Symfony, essayez un de ces <a href="http://www.symfony-project.org/plugins/filter?filter%5Bsf_1_0%5D=on&filter%5Bsf_1_1%5D=on&filter%5Bsf_1_2%5D=on&filter%5Bsf_1_3%5D=on&filter%5Bsf_1_4%5D=on&filter%5Bpropel%5D=on&filter%5Bdoctrine%5D=on&filter%5Bcategory_id%5D=&filter%5Bname%5D=breadcrumb" target="blank">plugins</a>.
+</p>
 <ul class="breadcrumb">
 	<li><a href="#">Home</a> <span class="divider">/</span></li>
 	<li><a href="#">Library</a> <span class="divider">/</span></li>
 	<li class="active">Data</li>
 </ul>
 
+<h1>DataTable (sortable par colonne)</h1>
+<p>
+    Pour les filtres par colonnes référez-vous au DOM. Il suffit d'ajouter la classe "with-filter" à la table. <br />Le reste de la configuration se fait dans la balise thead.
+</p>
 <table cellpadding="0" cellspacing="0" border="0" class="table table-striped with-filter bordered" id="example">
 	<thead>
 		<tr>
@@ -70,83 +78,103 @@
 
 <hr>
 
-<form class="well">
-    <label for="first_name">Prénom</label>
-    <input type="text" placeholder="Prénom"> <span class="help-inline">Associated help text!</span>
-    <label for="first_name">Nom</label>
-    <input type="text" placeholder="Nom">
-    <label class="checkbox">
-        <input type="checkbox"> Est majeur
-    </label>
-    <button type="submit" class="btn">Submit</button>
-</form>
-      
-<div class="hero-unit">
-	<span class="label">.btn</span>
-	<span class="label label-info">.btn-primary</span>
-	<span class="label label-success">.btn-success</span>
-	<span class="label label-warning">.btn-warning</span>
-	<span class="label label-important">.btn-danger</span>
-	<span class="label label-info">.btn-info</span>
-
-	<br clear="all" />
-	<br clear="all" />
-
-	<div class="btn-group">
-		<a class="btn" href="#">Left</a>
-		<a class="btn" href="#">Middle</a>
-		<a class="btn" href="#">Right</a>
-	</div>
-
-	<br clear="all" />
-
-	<div class="btn-group">
-		<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">Action <span class="caret"></span></a>
-		<ul class="dropdown-menu">
-			<li><a href="#">btn-primary</a></li>
-			<li><a href="#">btn-danger</a></li>
-			<li><a href="#">btn-success</a></li>
-			<li class="divider"></li>
-			<li><a href="#">btn-info</a></li>
-		</ul>
-	</div>
-
-	<br clear="all" />
-
-	<a href="#" class="btn" rel="popover" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title">Bouton Popover</a>
-
-	<br clear="all" />
-	<br clear="all" />
-
-	<div class="input-prepend">
-		<span class="add-on"><i class="icon-envelope"></i></span>
-		<input class="span2" id="iconInput" type="text">
-	</div>
-
-	<a class="btn" href="#"><i class="icon-comment"></i> A href avec icon</a>
-	<a class="btn btn-large" href="#"><i class="icon-comment"></i> A href avec icon LARGE</a>
-
-	<br clear="all" />
-	<br clear="all" />
-
-	<button type="submit" class="btn btn-large">Button large ou pas</button>
-
-	<br clear="all" />
-	<br clear="all" />
-
-	<a class="btn btn-large" data-toggle="modal" href="#myModal" >Launch Modal</a>
-
-	<br clear="all" />
-	<br clear="all" />
-
-	<form>
-    	<input type="file" name="file" class="input-file">
-    </form>
-
-    <label>Date :</label>
-	<input type="text" class="datepicker">
-    
+<h1>Form Symfony et gestion d'erreurs</h1>
+<div class="alert alert-block alert-error fade in">
+    <a class="close" data-dismiss="alert" href="#">×</a>
+    <h4 class="alert-heading">Erreur(s)</h4>
+    <ul>
+        <li>Le login est requis.</li>
+        <li>Confirmation du mot de passe requise.</li>
+        <li>Les deux mots de passe ne correspondent pas</li>
+    </ul>
 </div>
+<form action="action.php" method="post" class="well">
+    <div class="control-group error">
+        <label for="myform_username">Login</label>        
+        <input type="text" value="" placeholder="Login" id="myform_username">
+        <span class="help-inline">Le login est requis.</span>
+    </div>
+    <div class="control-group">
+        <label for="myform_email">Email</label>        
+        <input type="text" value="email@hotmail.com" placeholder="Email" id="myform_email">        
+        <span class="help-inline"></span>
+    </div>
+    <div class="control-group">
+        <label for="myform_birthdate">Date de naissance</label>        
+        <div class="input-prepend">
+            <span class="add-on"><i class="icon-calendar"></i></span>
+            <input type="text" class="datepicker" placeholder="Date de naissance" id="myform_birthdate">
+            <span class="help-inline"></span>
+        </div>
+    </div>
+    <div class="control-group">
+        <label for="myform_photo">Photo</label>        
+        <input type="file" name="file" class="input-file" placeholder="Photo" id="myform_photo">        
+        <span class="help-inline"></span>
+    </div>
+    <div class="control-group error">
+        <label for="myform_password">Mot de passe</label>        
+        <input type="password" placeholder="Mot de passe" id="myform_password">        
+        <span class="help-inline">Les deux mots de passe ne correspondent pas</span>
+    </div>
+    <div class="control-group error">
+        <label for="myform_password_confirm">Confirmation</label>        
+        <input type="password" placeholder="Confirmation" id="myform_password_confirm">        
+        <span class="help-inline">Confirmation du mot de passe requise.</span>
+    </div>
+    <br>
+    <input type="submit" class="btn" value="Inscription">
+</form>    
+
+<br clear="all" />
+<br clear="all" />
+
+<h1>Boutons et autres</h1>
+<span class="label">.btn</span>
+<span class="label label-info">.btn-primary</span>
+<span class="label label-success">.btn-success</span>
+<span class="label label-warning">.btn-warning</span>
+<span class="label label-important">.btn-danger</span>
+<span class="label label-info">.btn-info</span>
+
+<br clear="all" />
+<br clear="all" />
+
+<div class="btn-group">
+	<a class="btn" href="#">Left</a>
+	<a class="btn" href="#">Middle</a>
+	<a class="btn" href="#">Right</a>
+</div>
+
+<br clear="all" />
+
+<div class="btn-group">
+	<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">Action <span class="caret"></span></a>
+	<ul class="dropdown-menu">
+		<li><a href="#">btn-primary</a></li>
+		<li><a href="#">btn-danger</a></li>
+		<li><a href="#">btn-success</a></li>
+		<li class="divider"></li>
+		<li><a href="#">btn-info</a></li>
+	</ul>
+</div>
+
+<br clear="all" />
+
+<a href="#" class="btn" rel="popover" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title">Bouton Popover</a>
+
+<a class="btn" href="#"><i class="icon-comment"></i> A href avec icon</a>
+<a class="btn btn-large" href="#"><i class="icon-comment"></i> A href avec icon LARGE</a>
+
+<br clear="all" />
+<br clear="all" />
+
+<button type="submit" class="btn btn-large">Button large ou pas</button>
+
+<br clear="all" />
+<br clear="all" />
+
+<a class="btn btn-large" data-toggle="modal" href="#myModal" >Launch Modal</a>
 
 <br clear="all" />
 <br clear="all" />
@@ -165,6 +193,8 @@
 		<a href="#" class="btn" data-dismiss="modal" >Close</a>
 	</div>
 </div>
+
+<h1>Accordion</h1>
 
 <div class="accordion" id="accordion2">
 	<div class="accordion-group">
@@ -207,6 +237,8 @@
 
 <br clear="all" />
 <br clear="all" />
+
+<h1>Tabulations</h1>
 
 <ul class="nav nav-tabs">
 	<li class="active">

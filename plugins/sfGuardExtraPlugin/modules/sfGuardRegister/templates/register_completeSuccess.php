@@ -1,2 +1,2 @@
 <?php use_helper('I18N') ?>
-<?php echo __('You have successfully confirmed your e-mail address.') ?>
+<?php echo __('Vous avez confirmé votre adresse mail avec succès.') ?>
