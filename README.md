@@ -20,7 +20,7 @@
 
 Clonez le repo Github de façon récursive (pour récupérer les submodules)
 
-	git clone --recursive ...
+	git clone --recursive git@github.com:mparpaillon/sfBootstrapTwitter.git
 
 Créez la BDD du projet et l'utilisateur associé
 

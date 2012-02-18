@@ -88,7 +88,7 @@
         <li>Les deux mots de passe ne correspondent pas</li>
     </ul>
 </div>
-<form action="action.php" method="post" class="well">
+<form action="action.php" method="post">
     <div class="control-group error">
         <label for="myform_username">Login</label>        
         <input type="text" value="" placeholder="Login" id="myform_username">
@@ -122,8 +122,10 @@
         <input type="password" placeholder="Confirmation" id="myform_password_confirm">        
         <span class="help-inline">Confirmation du mot de passe requise.</span>
     </div>
-    <br>
-    <input type="submit" class="btn" value="Inscription">
+    <div class="form-actions">
+        <button type="submit" class="btn btn-primary">Inscription</button>
+        <button class="btn">Cancel</button>
+    </div>
 </form>    
 
 <br clear="all" />

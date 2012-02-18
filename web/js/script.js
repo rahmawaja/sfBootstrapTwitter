@@ -1,4 +1,7 @@
 $(document).ready(function(){
+    // Popover
+    $("[rel=tooltip]").tooltip();
+    
 	// Popover
 	$("[rel=popover]").popover({
 		offset: 10,

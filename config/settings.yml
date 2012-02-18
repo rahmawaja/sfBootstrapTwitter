@@ -32,6 +32,6 @@ all:
     jquery_web_dir:         /sfJqueryReloadedPlugin
     
     enabled_modules:        [default, sfGuardAuth, sfGuardRegister, sfGuardForgotPassword]
-    standard_helpers:       [Partial, jQuery, Date]
+    standard_helpers:       [Partial, jQuery, Date, LinkToIco]
     
     charset:                utf-8

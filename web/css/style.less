@@ -18,22 +18,29 @@
 .icons-group{
     display: block;
     margin: 0;
-    
+   
     li{
         margin: 2px;
         position: relative;
-        padding: 4px 0;
-        cursor: pointer;
         float: left;
         list-style: none;
-        
-        .ui-icon {
-            float: left;
-            margin: 0 4px;
+       
+        a{
+            display: block;
+            padding: 4px;
+            
+            i{
+                padding-right: 1px;
+                vertical-align: text-top;
+                margin-left: 1px;
+            }
         }
-        
-        i{
-            margin: 1px 4px 0;
+            
+        &.disabled{
+            cursor: default;
+            background-image: none;
+            background-color: #E6E6E6;
+            padding: 4px;
         }
     }
 }
@@ -159,4 +166,8 @@
 
 .input-file{
     background-color: white;
+}
+
+.page-header {
+    padding-bottom: 8px;
 }

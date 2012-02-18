@@ -15,7 +15,15 @@ default:
     
   javascripts:
     - jq-theme/jquery-ui-1.8.16.custom.min.js
-    - twitter/bootstrap.min.js
+    - twitter/bootstrap-transition.js
+    - twitter/bootstrap-alert.js
+    - twitter/bootstrap-button.js
+    - twitter/bootstrap-collapse.js
+    - twitter/bootstrap-dropdown.js
+    - twitter/bootstrap-modal.js
+    - twitter/bootstrap-tooltip-auto.js
+    - twitter/bootstrap-popover.js
+    - twitter/bootstrap-tab.js
     - file-input/enhance.min.js
     - file-input/fileinput.jquery.js
     - dataTables/jquery.dataTables.min.js

@@ -3,7 +3,6 @@ dev:
     param:
       classname: DebugPDO
       debug: { realmemoryusage: true, details: { time: { enabled: true }, slow: { enabled: true, threshold: 0.1 }, mem: { enabled: true }, mempeak: { enabled: true }, memdelta: { enabled: true } } }
-      queries: { value: 'SET NAMES UTF8;' }
 test:
   propel:
     param:
@@ -16,6 +15,7 @@ all:
       dsn: 'mysql:host=localhost;dbname=sfBootstrap' # @EDIT
       username: sfBootstrap  # @EDIT
       password: null
-      encoding: # On laisse l'encodage vide pour les versions de PHP inférieures à 5.3.6
+      encoding: # On laisse l'encodage vide pour les versions de PHP inférieures à 5.3.6, pour les version supérieures mettre utf8 @EDIT
       persistent: true
       pooling: true
+      queries: { value: 'SET NAMES UTF8;' }
