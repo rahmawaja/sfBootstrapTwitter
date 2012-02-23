@@ -3,16 +3,17 @@
 	<head>
 		<?php include_http_metas() ?>
 		<?php include_metas() ?>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<?php include_title() ?>
+
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<?php include_stylesheets() ?>
+		<?php include_javascripts() ?>
 
 		<!-- IE6-8 support of HTML elements -->
 		<!--[if lt IE 9]>
 			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-
-		<link rel="shortcut icon" href="/favicon.ico" />
-		<?php include_stylesheets() ?>
-		<?php include_javascripts() ?>
 	</head>
 	<body>
 		<?php include_partial("main/menu") ?>

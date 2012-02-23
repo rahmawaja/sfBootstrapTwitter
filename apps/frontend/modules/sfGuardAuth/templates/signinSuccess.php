@@ -9,12 +9,12 @@
     <div class="control-group">
         <?php echo $form['username']->renderLabel() ?>
         <?php echo $form['username']->render(array("placeholder" => "Login")) ?>
-        <span class="help-inline"><?php echo $form['username']->getError() ?></span>
+        <span class="help-inline"><?php echo $form['username']->renderError() ?></span>
     </div>
     <div class="control-group">
         <?php echo $form['password']->renderLabel() ?>
         <?php echo $form['password']->render(array("placeholder" => "Mot de passe")) ?>
-        <span class="help-inline"><?php echo $form['password']->getError() ?></span>
+        <span class="help-inline"><?php echo $form['password']->renderError() ?></span>
     </div>
     <input type="submit" class="btn" value="Connexion" />
     <?php echo link_to("Inscription", "@sf_guard_register") ?>

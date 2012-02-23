@@ -18,6 +18,7 @@ all:
     
     # Set default Timezone
     default_timezone:       Europe/Paris
+    i18n:                   on
     default_culture:        fr
 
     # Output escaping settings
@@ -35,3 +36,4 @@ all:
     standard_helpers:       [Partial, jQuery, Date, LinkToIco]
     
     charset:                utf-8
+    

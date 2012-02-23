@@ -6,22 +6,22 @@
     <div class="control-group">
         <?php echo $form['username']->renderLabel() ?>
         <?php echo $form['username']->render(array("placeholder" => "Login")) ?>
-        <span class="help-inline"><?php echo $form['username']->getError() ?></span>
+        <span class="help-inline"><?php echo $form['username']->renderError() ?></span>
     </div>
     <div class="control-group">
         <?php echo $form['email']->renderLabel() ?>
         <?php echo $form['email']->render(array("placeholder" => "Email")) ?>
-        <span class="help-inline"><?php echo $form['email']->getError() ?></span>
+        <span class="help-inline"><?php echo $form['email']->renderError() ?></span>
     </div>
     <div class="control-group">
         <?php echo $form['password']->renderLabel() ?>
         <?php echo $form['password']->render(array("placeholder" => "Mot de passe")) ?>
-        <span class="help-inline"><?php echo $form['password']->getError() ?></span>
+        <span class="help-inline"><?php echo $form['password']->renderError() ?></span>
     </div>
     <div class="control-group">
         <?php echo $form['password_confirm']->renderLabel() ?>
         <?php echo $form['password_confirm']->render(array("placeholder" => "Confirmation")) ?>
-        <span class="help-inline"><?php echo $form['password_confirm']->getError() ?></span>
+        <span class="help-inline"><?php echo $form['password_confirm']->renderError() ?></span>
     </div>
     <div class="form-actions">
         <button type="submit" class="btn btn-primary">Inscription</button>
