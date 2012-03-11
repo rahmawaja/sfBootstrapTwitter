@@ -6,6 +6,10 @@
     <body>
       <!-- Actions -->
       <trans-unit>
+		<source>You don't have the required permission to access this page.</source>
+		<target>Vous n'avez pas les droits nécessaires pour effectuer cette action.</target>
+      </trans-unit>
+      <trans-unit>
         <source>New</source>
         <target>Nouveau</target>
       </trans-unit>
