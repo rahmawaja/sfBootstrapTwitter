@@ -12,7 +12,8 @@ class ProjectConfiguration extends sfProjectConfiguration
   		'sfGuardExtraPlugin',
   		'sfGuardPlugin',
   		'sfJqueryReloadedPlugin',
-  		'sfFormExtraPlugin'
+  		'sfFormExtraPlugin',
+  		'sfHtml5FormPlugin'
 	);
   }
 }
