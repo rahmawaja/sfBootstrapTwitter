@@ -123,8 +123,13 @@
         <span class="help-inline">Confirmation du mot de passe requise.</span>
     </div>
     <div class="form-actions">
-        <button type="submit" class="btn btn-primary">Inscription</button>
-        <button class="btn">Cancel</button>
+        <button type="submit" class="btn">.btn</button>
+        <button type="submit" class="btn btn-primary">.btn-primary</button>
+        <button type="submit" class="btn btn-success">.btn-success</button>
+        <button type="submit" class="btn btn-warning">.btn-warning</button>
+        <button type="submit" class="btn btn-danger">.btn-danger</button>
+        <button type="submit" class="btn btn-info">.btn-info</button>
+        <button type="submit" class="btn btn-inverse">.btn-inverse</button>
     </div>
 </form>    
 
@@ -132,12 +137,12 @@
 <br clear="all" />
 
 <h1>Boutons et autres</h1>
-<span class="label">.btn</span>
-<span class="label label-info">.btn-primary</span>
-<span class="label label-success">.btn-success</span>
-<span class="label label-warning">.btn-warning</span>
-<span class="label label-important">.btn-danger</span>
-<span class="label label-info">.btn-info</span>
+<span class="label">.label</span>
+<span class="label label-info">.label-info</span>
+<span class="label label-success">.label-success</span>
+<span class="label label-warning">.label-warning</span>
+<span class="label label-important">.label-important</span>
+<span class="label label-info">.label-info</span>
 
 <br clear="all" />
 <br clear="all" />
@@ -171,7 +176,8 @@
 <br clear="all" />
 <br clear="all" />
 
-<button type="submit" class="btn btn-large">Button large ou pas</button>
+<button type="submit" class="btn btn-large">.btn-large</button>
+<button type="submit" class="btn btn-mini">.btn-mini</button>
 
 <br clear="all" />
 <br clear="all" />

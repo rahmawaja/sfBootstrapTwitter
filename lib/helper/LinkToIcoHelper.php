@@ -1,9 +1,9 @@
-<?php
+<?php 
+function link_to_ico($text, $route, $ico, $param = array()){
+      $param = array_merge(array("rel" => "tooltip", "data-original-title" => $text), $param);
+      $isTwitter = substr($ico, 0, 2) == "ui" ? false : true;
 
-function link_to_ico($text, $route, $ico, $isTwitter = false){
-      if($isTwitter){
-            return "<a href='".url_for($route)."' rel='tooltip' data-original-title='$text'><i class='$ico'></i></a>";
-      }else{
-            return "<a href='".url_for($route)."' rel='tooltip' data-original-title='$text'><span class='ui-icon $ico'></span></a>";
-      }
+      $icon = $isTwitter ? "<i class='$ico'></i>" : "<span class='ui-icon $ico'></span>";
+
+      return link_to($icon, $route, $param);
 }

@@ -3,7 +3,7 @@
 ## Versions
  Symfony : 1.4.13
  
- Bootstrap Twitter : 2.0
+ Bootstrap Twitter : 2.0.1
  
 ## Plugins
  sfPropelORMPlugin (1.1.2 => Propel 1.6)
@@ -33,6 +33,7 @@ Quelques fixtures sont intégrées au projet. Vous pouvez vous connecter avec lo
 ## Utilisation de LESS
 
 Il est possible de charger un less.js. Pour ma part j'utilise le soft SimpLESS http://wearekiss.com/simpless pour le dév et n'envoie que les CSS pour la prod.
+La dernière version de less est requise depuis la maj 2.0.1 du Bootstrap Twitter. Aux dernières nouvelles, SimpLESS ne dispose pas de cette mise à jour, il faudra donc passer par un logiciel tel que Crunch http://crunchapp.net/.
 
 ## JavaScript 
 
