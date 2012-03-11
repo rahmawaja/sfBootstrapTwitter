@@ -32,9 +32,17 @@
 		<tr>
 			<th class="input">Filter engines</th>
 			<th class="input">Filter browsers</th>
-			<th class="select">Filter Platform</th>
-			<th class="select">Filter version</th>
-			<th></th>
+            <th class="select" data-default="Win 95+">Filter Platform</th>
+            <th class="select custom">
+                <select>
+                    <option value="Filter version">Filter version</option>
+                    <option value="1.5">1.5</option>
+                    <option value="1.6">1.6</option>
+                    <option value="1.8">1.8</option>
+                    <option value="4">4</option>
+                </select>
+            </th>
+            <th></th>
 		</tr>
 		<tr>
 			<th>Rendering engine</th>
