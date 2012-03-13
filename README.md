@@ -29,11 +29,13 @@ Clonez le repo Github de façon récursive (pour récupérer les submodules)
 	git clone --recursive git@github.com:mparpaillon/sfBootstrapTwitter.git
 	
 NB : Pour toute version de Git inférieure à la 1.6.5, l'option --recursive ne fonctionne pas. Il faudra donc procéder ainsi :
+
 	git clone git@github.com:mparpaillon/sfBootstrapTwitter.git
 	cd sfBootstrapTwitter
 	git submodule update --init
 
 Cela provoquera le checkout de sfPropelORMPlugin. Ce procédé n'étant pas récursif il faudra alors faire comme suit :
+
 	cd plugins/sfPropelORMPlugin
 	git submodule update --init
 
