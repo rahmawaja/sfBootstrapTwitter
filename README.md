@@ -22,13 +22,13 @@ http://sfbootstrap.michelparpaillon.com/
  
  sfHtml5FormPlugin (0.4.9)
 
-## Utilisation
+## Checkout (git >= 1.6.5)
 
 Clonez le repo Github de façon récursive (pour récupérer les submodules)
 
 	git clone --recursive git@github.com:mparpaillon/sfBootstrapTwitter.git
-	
-NB : Pour toute version de Git inférieure à la 1.6.5, l'option --recursive ne fonctionne pas. Il faudra donc procéder ainsi :
+
+## Checkout (git < 1.6.5)	
 
 	git clone git@github.com:mparpaillon/sfBootstrapTwitter.git
 	cd sfBootstrapTwitter
@@ -38,10 +38,12 @@ Cela provoquera le checkout de sfPropelORMPlugin. Ce procédé n'étant pas réc
 
 	cd plugins/sfPropelORMPlugin
 	git submodule update --init
+	
+## Initialisation
 
 Créez la BDD du projet et l'utilisateur associé
 
-Cherchez ensuite dans votre IDE la chaîne "@EDIT". Celle-ci pointe tous les champs nécessitant une saisie.
+Cherchez ensuite via votre IDE la chaîne "@EDIT". Celle-ci pointe tous les champs nécessitant une saisie.
 
 ## sfHtml5FormPlugin
 
