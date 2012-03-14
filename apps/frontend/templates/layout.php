@@ -6,7 +6,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<?php include_title() ?>
 
-		<link rel="shortcut icon" href="/favicon.ico" />
 		<?php include_stylesheets() ?>
 		<?php include_javascripts() ?>
 
@@ -14,6 +13,11 @@
 		<!--[if lt IE 9]>
 			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
+        
+		<link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="/images/ico/apple-touch-icon-57-precomposed.png">
 	</head>
 	<body>
 		<?php include_partial("main/menu") ?>
