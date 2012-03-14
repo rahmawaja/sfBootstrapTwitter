@@ -27,8 +27,8 @@
     <li class="ui-state-default ui-corner-all"><?php echo link_to_ico("ui-icon-arrow-1-n", "@homepage", "ui-icon-arrow-1-n") ?></li>
                                                      
     <li class="ui-state-default ui-corner-all"><?php echo link_to_ico("ui-icon-arrow-1-ne", "@homepage", "ui-icon-arrow-1-ne") ?></li>
-    <li class="ui-state-default ui-corner-all"><?php echo link_to_ico("ui-icon-arrow-1-e", "@homepage", "hahahahahahaha") ?></li>
-    <li class="ui-state-default ui-corner-all"><?php echo link_to_ico("ui-icon-arrow-1-e", "@homepage", "hahahahahahaha") ?></li>
+    <li class="ui-state-default ui-corner-all"><?php echo link_to_ico("ui-icon-arrow-1-e", "@homepage", "ui-icon-arrow-1-e") ?></li>
+    <li class="ui-state-default ui-corner-all"><?php echo link_to_ico("ui-icon-arrow-1-e", "@homepage", "ui-icon-arrow-1-e") ?></li>
     <li class="ui-state-default ui-corner-all"><?php echo link_to_ico("ui-icon-arrow-1-s", "@homepage", "ui-icon-arrow-1-s") ?></li>
     <li class="ui-state-default ui-corner-all"><?php echo link_to_ico("ui-icon-arrow-1-sw", "@homepage", "ui-icon-arrow-1-sw") ?></li>
     <li class="ui-state-default ui-corner-all"><?php echo link_to_ico("ui-icon-arrow-1-w", "@homepage", "ui-icon-arrow-1-w") ?></li>
