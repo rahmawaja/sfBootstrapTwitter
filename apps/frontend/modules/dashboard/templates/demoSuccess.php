@@ -130,16 +130,17 @@
         <input type="password" placeholder="Confirmation" id="myform_password_confirm">        
         <span class="help-inline">Confirmation du mot de passe requise.</span>
     </div>
-    <div class="form-actions">
-        <button type="submit" class="btn">.btn</button>
-        <button type="submit" class="btn btn-primary">.btn-primary</button>
-        <button type="submit" class="btn btn-success">.btn-success</button>
-        <button type="submit" class="btn btn-warning">.btn-warning</button>
-        <button type="submit" class="btn btn-danger">.btn-danger</button>
-        <button type="submit" class="btn btn-info">.btn-info</button>
-        <button type="submit" class="btn btn-inverse">.btn-inverse</button>
-    </div>
-</form>    
+</form>
+ 
+<div class="form-actions">
+    <button class="btn">.btn</button>
+    <button class="btn btn-primary">.btn-primary</button>
+    <button class="btn btn-success">.btn-success</button>
+    <button class="btn btn-warning">.btn-warning</button>
+    <button class="btn btn-danger">.btn-danger</button>
+    <button class="btn btn-info">.btn-info</button>
+    <button class="btn btn-inverse">.btn-inverse</button>
+</div>
 
 <br clear="all" />
 <br clear="all" />
@@ -184,8 +185,8 @@
 <br clear="all" />
 <br clear="all" />
 
-<button type="submit" class="btn btn-large">.btn-large</button>
-<button type="submit" class="btn btn-mini">.btn-mini</button>
+<button class="btn btn-large">.btn-large</button>
+<button class="btn btn-mini">.btn-mini</button>
 
 <br clear="all" />
 <br clear="all" />

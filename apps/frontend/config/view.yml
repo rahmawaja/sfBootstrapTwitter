@@ -9,7 +9,6 @@ default:
 
   stylesheets:
     - jq-theme/jquery-ui-1.8.16.custom.css
-    - twitter/bootstrap.css
     - file-input/enhanced.css
     
   javascripts:
@@ -27,6 +26,7 @@ default:
     - file-input/fileinput.jquery.js
     - dataTables/jquery.dataTables.min.js
     - script.js
+    - less-1.3.0.min.js
 
   has_layout:     true
   layout:         layout

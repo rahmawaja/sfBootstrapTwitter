@@ -3,7 +3,7 @@
 ## Versions
  Symfony : 1.4.13
  
- Bootstrap Twitter : 2.0.1
+ Bootstrap Twitter : 2.0.2
  
  Less.js : 1.3.0
  
