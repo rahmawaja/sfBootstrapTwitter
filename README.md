@@ -5,6 +5,8 @@
  
  Bootstrap Twitter : 2.0.1
  
+ Less.js : 1.3.0
+ 
 ## Démo
 
 http://sfbootstrap.michelparpaillon.com/
@@ -53,11 +55,6 @@ Certains widgets tels que les types date, time ou email sont d'autant plus agré
 ## Connexion
 
 Quelques fixtures sont intégrées au projet. Vous pouvez vous connecter avec login = mdp = "admin"
-
-## Utilisation de LESS
-
-Il est possible de charger un less.js. Pour ma part j'utilise le soft SimpLESS http://wearekiss.com/simpless pour le dév et n'envoie que les CSS pour la prod.
-La dernière version de less est requise depuis la maj 2.0.1 du Bootstrap Twitter. Aux dernières nouvelles, SimpLESS ne dispose pas de cette mise à jour, il faudra donc passer par un logiciel tel que Crunch http://crunchapp.net/.
 
 ## JavaScript 
 

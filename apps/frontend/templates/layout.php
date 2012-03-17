@@ -18,6 +18,9 @@
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/ico/apple-touch-icon-114-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/ico/apple-touch-icon-72-precomposed.png">
         <link rel="apple-touch-icon-precomposed" href="/images/ico/apple-touch-icon-57-precomposed.png">
+        
+        <link rel="stylesheet/less" type="text/css" href="/css/style.less">
+        <script src="/js/less-1.3.0.min.js" type="text/javascript"></script>
 	</head>
 	<body>
 		<?php include_partial("main/menu") ?>
