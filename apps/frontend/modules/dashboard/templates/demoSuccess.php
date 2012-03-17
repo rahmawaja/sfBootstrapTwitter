@@ -132,20 +132,19 @@
     </div>
 </form>
  
-<div class="form-actions">
-    <button class="btn">.btn</button>
-    <button class="btn btn-primary">.btn-primary</button>
-    <button class="btn btn-success">.btn-success</button>
-    <button class="btn btn-warning">.btn-warning</button>
-    <button class="btn btn-danger">.btn-danger</button>
-    <button class="btn btn-info">.btn-info</button>
-    <button class="btn btn-inverse">.btn-inverse</button>
-</div>
+<h1>Boutons</h1>
+<button class="btn">.btn</button>
+<button class="btn btn-primary">.btn-primary</button>
+<button class="btn btn-success">.btn-success</button>
+<button class="btn btn-warning">.btn-warning</button>
+<button class="btn btn-danger">.btn-danger</button>
+<button class="btn btn-info">.btn-info</button>
+<button class="btn btn-inverse">.btn-inverse</button>
 
 <br clear="all" />
 <br clear="all" />
 
-<h1>Boutons et autres</h1>
+<h1>Labels</h1>
 <span class="label">.label</span>
 <span class="label label-info">.label-info</span>
 <span class="label label-success">.label-success</span>
@@ -156,6 +155,18 @@
 <br clear="all" />
 <br clear="all" />
 
+<h1>Badges</h1>
+<span class="badge">.badge</span>
+<span class="badge badge-success">.badge-success</span>
+<span class="badge badge-warning">.badge-warning</span>
+<span class="badge badge-error">.badge-error</span>
+<span class="badge badge-info">.badge-info</span>
+<span class="badge badge-inverse">.badge-inverse</span>
+
+<br clear="all" />
+<br clear="all" />
+
+<h1>Autres boutons</h1>
 <div class="btn-group">
 	<a class="btn" href="#">Left</a>
 	<a class="btn" href="#">Middle</a>
