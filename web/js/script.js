@@ -19,7 +19,7 @@ $(document).ready(function(){
     // Ajout de la classe error sur les forms erronés
     $(".control-group .help-inline").each(function(){
         if($(this).html() != ""){
-            $(this).parent().addClass('error');
+            $(this).parents(".control-group").addClass('error');
         }
     });
     
