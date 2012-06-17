@@ -3,9 +3,7 @@
 ## Versions
  Symfony : 1.4.13
  
- Bootstrap Twitter : 2.0.2
- 
- Less.js : 1.3.0
+ Bootstrap Twitter : 2.0.4
  
 ## Démo
 
@@ -62,3 +60,8 @@ jQuery
 Twitter : Tooltip, Popover, etc
 DataTables
 File-input
+
+## LESS
+
+Je conseille l'utilisation d'un compilateur tel que SimpLESS pour l'utilisation du LESS.
+Il est également possible d'utiliser le fichier less-1.3.0.min.js pour la compilation au chargement. Cela sous-entend de lier les fichiers LESS directement dans la balise <head> de layout.php

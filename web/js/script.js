@@ -2,18 +2,18 @@ $(document).ready(function(){
     // Popover
     $("[rel=tooltip]").tooltip();
     
-	// Popover
-	$("[rel=popover]").popover({
-		offset: 10,
-		placement: "right"
-	});
+    // Popover
+    $("[rel=popover]").popover({
+        offset: 10,
+        placement: "right"
+    });
 	
-	// Input file
-	$('.input-file').customFileInput({
+    // Input file
+    $('.input-file').customFileInput({
         button_position : 'right'
     });
 	
-	// Datepicker
+    // Datepicker
     $('.datepicker').datepicker();
     
     // Ajout de la classe error sur les forms erronés

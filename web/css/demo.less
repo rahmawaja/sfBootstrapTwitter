@@ -1,0 +1,61 @@
+body{
+    background: url(/images/grid-18px-masked.png) repeat left top;
+}
+
+.show-grid {
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+    .show-grid {
+        margin-top: 0;
+        margin-bottom: 0;
+        [class*="span"] {
+            background-color: #ccc;
+        }
+    }
+
+    [class*="span"] {
+        background-color: #eee;
+        text-align: center;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        min-height: 30px;
+        line-height: 30px;
+    }
+
+    &:hover {
+        [class*="span"] {
+            background: #ddd;
+        }
+    }
+}
+
+.masthead {
+    text-align: center;
+
+    .btn-large{
+        .border-radius(6px);
+        font-size: 20px;
+        font-weight: normal;
+        padding: 14px 24px;
+        margin-right: 10px;
+    }
+
+    h1{
+        font-size: 81px;
+        font-weight: bold;
+        letter-spacing: -1px;
+        line-height: 1;
+        margin-bottom: 18px;
+    }
+
+    p{
+        margin-left: 5%;
+        margin-right: 5%;
+        font-size: 30px;
+        font-weight: 300;
+        line-height: 36px;
+        margin-bottom: 18px;
+    }
+}

@@ -1,4 +1,6 @@
-<h1>Notifications (setFlash Symfony)</h1>
+<div class="page-header">
+    <h1>Notifications <small>setFlash Symfony</small></h1>
+</div>
 
 <div class="alert fade in alert-success">
     <a class="close" data-dismiss="alert" href="#">×</a>
@@ -13,7 +15,10 @@
     <strong>Notice_information !</strong> Ce texte attire votre attention sur quelque chose.
 </div>
 
-<h1>Breadcrumb (Fil d'ariane)</h1>
+<div class="page-header">
+    <h1>Breadcrumb <small>Fil d'ariane</small></h1>
+</div>
+
 <p>
     Pour générer un Breadcrumb sous Symfony, essayez un de ces <a href="http://www.symfony-project.org/plugins/filter?filter%5Bsf_1_0%5D=on&filter%5Bsf_1_1%5D=on&filter%5Bsf_1_2%5D=on&filter%5Bsf_1_3%5D=on&filter%5Bsf_1_4%5D=on&filter%5Bpropel%5D=on&filter%5Bdoctrine%5D=on&filter%5Bcategory_id%5D=&filter%5Bname%5D=breadcrumb" target="blank">plugins</a>.
 </p>
@@ -23,7 +28,9 @@
     <li class="active">Data</li>
 </ul>
 
-<h1>DataTable (sortable par colonne)</h1>
+<div class="page-header">
+    <h1>DataTable <small>Sortable par colonne</small></h1>
+</div>
 <p>
     Pour les filtres par colonnes référez-vous au DOM. Il suffit d'ajouter la classe "with-filter" à la table. <br />Le reste de la configuration se fait dans la balise thead.
 </p>
@@ -86,7 +93,10 @@
 
 <hr>
 
-<h1>Form Symfony et gestion d'erreurs</h1>
+<div class="page-header">
+    <h1>Form Symfony et gestion d'erreurs</h1>
+</div>
+
 <div class="alert alert-block alert-error fade in">
     <a class="close" data-dismiss="alert" href="#">×</a>
     <h4 class="alert-heading">Erreur(s)</h4>
@@ -96,43 +106,58 @@
         <li>Les deux mots de passe ne correspondent pas</li>
     </ul>
 </div>
-<form action="action.php" method="post">
+
+<form action="action.php" method="post" class="form-horizontal">
     <div class="control-group error">
-        <label for="myform_username">Login</label>        
-        <input type="text" value="" placeholder="Login" id="myform_username">
-        <span class="help-inline">Le login est requis.</span>
+        <label class="control-label" for="myform_username">Login</label>
+        <div class="controls">
+            <input type="text" value="" placeholder="Login" id="myform_username">
+            <span class="help-inline">Le login est requis.</span>
+        </div>
     </div>
     <div class="control-group">
-        <label for="myform_email">Email</label>        
-        <input type="text" value="email@hotmail.com" placeholder="Email" id="myform_email">        
-        <span class="help-inline"></span>
-    </div>
-    <div class="control-group">
-        <label for="myform_birthdate">Date de naissance</label>        
-        <div class="input-prepend">
-            <span class="add-on"><i class="icon-calendar"></i></span>
-            <input type="text" class="datepicker" placeholder="Date de naissance" id="myform_birthdate">
+        <label class="control-label" for="myform_email">Email</label>
+        <div class="controls">
+            <input type="text" value="email@gmail.com" placeholder="Email" id="myform_email">
             <span class="help-inline"></span>
         </div>
     </div>
     <div class="control-group">
-        <label for="myform_photo">Photo</label>        
-        <input type="file" name="file" class="input-file" placeholder="Photo" id="myform_photo">        
-        <span class="help-inline"></span>
+        <label class="control-label" for="myform_birthdate">Date de naissance</label>
+        <div class="controls">
+            <div class="input-prepend">
+                <span class="add-on"><i class="icon-calendar"></i></span><input type="text" class="datepicker" placeholder="Date de naissance" size="16" id="myform_birthdate">
+                <span class="help-inline"></span>
+            </div>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="myform_photo">Photo</label>
+        <div class="controls">
+            <input type="file" name="file" class="input-file" placeholder="Photo" id="myform_photo">
+            <span class="help-inline"></span>
+        </div>
     </div>
     <div class="control-group error">
-        <label for="myform_password">Mot de passe</label>        
-        <input type="password" placeholder="Mot de passe" id="myform_password">        
-        <span class="help-inline">Les deux mots de passe ne correspondent pas</span>
+        <label class="control-label" for="myform_password">Mot de passe</label>
+        <div class="controls">
+            <input type="password" placeholder="Mot de passe" id="myform_password">
+            <span class="help-inline">Les deux mots de passe ne correspondent pas</span>
+        </div>
     </div>
     <div class="control-group error">
-        <label for="myform_password_confirm">Confirmation</label>        
-        <input type="password" placeholder="Confirmation" id="myform_password_confirm">        
-        <span class="help-inline">Confirmation du mot de passe requise.</span>
+        <label class="control-label" for="myform_password_confirm">Confirmation</label>
+        <div class="controls">
+            <input type="password" placeholder="Confirmation" id="myform_password_confirm">
+            <span class="help-inline">Confirmation du mot de passe requise.</span>
+        </div>
     </div>
 </form>
 
-<h1>Boutons</h1>
+<div class="page-header">
+    <h1>Boutons</h1>
+</div>
+
 <button class="btn">.btn</button>
 <button class="btn btn-primary">.btn-primary</button>
 <button class="btn btn-success">.btn-success</button>
@@ -144,7 +169,10 @@
 <br clear="all" />
 <br clear="all" />
 
-<h1>Labels</h1>
+<div class="page-header">
+    <h1>Labels</h1>
+</div>
+
 <span class="label">.label</span>
 <span class="label label-info">.label-info</span>
 <span class="label label-success">.label-success</span>
@@ -155,7 +183,10 @@
 <br clear="all" />
 <br clear="all" />
 
-<h1>Badges</h1>
+<div class="page-header">
+    <h1>Badges</h1>
+</div>
+
 <span class="badge">.badge</span>
 <span class="badge badge-success">.badge-success</span>
 <span class="badge badge-warning">.badge-warning</span>
@@ -166,38 +197,59 @@
 <br clear="all" />
 <br clear="all" />
 
-<h1>Autres boutons</h1>
-<div class="btn-group">
-    <a class="btn" href="#">Left</a>
-    <a class="btn" href="#">Middle</a>
-    <a class="btn" href="#">Right</a>
+<div class="page-header">
+    <h1>Autres boutons</h1>
 </div>
 
+<button class="btn btn-large">.btn-large</button>
+<button class="btn btn-small">.btn-small</button>
+<button class="btn btn-mini">.btn-mini</button>
+
+<br clear="all" />
 <br clear="all" />
 
 <div class="btn-group">
-    <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">Action <span class="caret"></span></a>
-    <ul class="dropdown-menu">
-        <li><a href="#">btn-primary</a></li>
-        <li><a href="#">btn-danger</a></li>
-        <li><a href="#">btn-success</a></li>
-        <li class="divider"></li>
-        <li><a href="#">btn-info</a></li>
-    </ul>
+    <button class="btn" href="#">Left</buttona>
+    <button class="btn" href="#">Middle</button>
+    <button class="btn" href="#">Right</button>
+</div>
+<br clear="all" />
+
+<div class="btn-toolbar">
+    <div class="btn-group">
+        <button class="btn">Dropdown</button>
+        <button class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+        <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+        </ul>
+    </div>
+    <div class="btn-group dropup">
+        <button class="btn">Dropup</button>
+        <button class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+        <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+        </ul>
+    </div>
 </div>
 
 <br clear="all" />
 
 <a href="#" class="btn" rel="popover" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title">Bouton Popover</a>
 
-<a class="btn" href="#"><i class="icon-comment"></i> A href avec icon</a>
-<a class="btn btn-large" href="#"><i class="icon-comment"></i> A href avec icon LARGE</a>
-
 <br clear="all" />
 <br clear="all" />
 
-<button class="btn btn-large">.btn-large</button>
-<button class="btn btn-mini">.btn-mini</button>
+<a class="btn" href="#">
+    <i class="icon-comment"></i> A href avec icon
+</a>
 
 <br clear="all" />
 <br clear="all" />
@@ -222,7 +274,9 @@
     </div>
 </div>
 
-<h1>Accordion</h1>
+<div class="page-header">
+    <h1>Accordion</h1>
+</div>
 
 <div class="accordion" id="accordion2">
     <div class="accordion-group">
@@ -266,7 +320,9 @@
 <br clear="all" />
 <br clear="all" />
 
-<h1>Tabulations</h1>
+<div class="page-header">
+    <h1>Tabs</h1>
+</div>
 
 <ul class="nav nav-tabs">
     <li class="active">

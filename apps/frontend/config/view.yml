@@ -8,8 +8,10 @@ default:
     language:     fr
 
   stylesheets:
+    - twitter/bootstrap.css
     - jq-theme/jquery-ui-1.8.16.custom.css
     - file-input/enhanced.css
+    - style.css
     
   javascripts:
     - jq-theme/jquery-ui-1.8.16.custom.min.js
@@ -19,14 +21,13 @@ default:
     - twitter/bootstrap-collapse.js
     - twitter/bootstrap-dropdown.js
     - twitter/bootstrap-modal.js
-    - twitter/bootstrap-tooltip-auto.js
+    - twitter/bootstrap-tooltip.js
     - twitter/bootstrap-popover.js
     - twitter/bootstrap-tab.js
     - file-input/enhance.min.js
     - file-input/fileinput.jquery.js
     - dataTables/jquery.dataTables.min.js
     - script.js
-    - less-1.3.0.min.js
 
   has_layout:     true
   layout:         layout

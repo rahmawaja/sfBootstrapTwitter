@@ -323,6 +323,26 @@
     <li class="ui-state-default ui-corner-all"><?php echo link_to_ico("icon-folder-open", "@homepage", "icon-folder-open") ?></li>
     <li class="ui-state-default ui-corner-all"><?php echo link_to_ico("icon-resize-vertical", "@homepage", "icon-resize-vertical") ?></li>
     <li class="ui-state-default ui-corner-all"><?php echo link_to_ico("icon-resize-horizontal", "@homepage", "icon-resize-horizontal") ?></li>
+    <li class="ui-state-default ui-corner-all"><?php echo link_to_ico("icon-hdd", "@homepage", "icon-hdd") ?></li>
+    <li class="ui-state-default ui-corner-all"><?php echo link_to_ico("icon-bullhorn", "@homepage", "icon-bullhorn") ?></li>
+    <li class="ui-state-default ui-corner-all"><?php echo link_to_ico("icon-bell", "@homepage", "icon-bell") ?></li>
+    <li class="ui-state-default ui-corner-all"><?php echo link_to_ico("icon-certificate", "@homepage", "icon-certificate") ?></li>
+    <li class="ui-state-default ui-corner-all"><?php echo link_to_ico("icon-thumbs-up", "@homepage", "icon-thumbs-up") ?></li>
+    <li class="ui-state-default ui-corner-all"><?php echo link_to_ico("icon-thumbs-down", "@homepage", "icon-thumbs-down") ?></li>
+    <li class="ui-state-default ui-corner-all"><?php echo link_to_ico("icon-hand-right", "@homepage", "icon-hand-right") ?></li>
+    <li class="ui-state-default ui-corner-all"><?php echo link_to_ico("icon-hand-up", "@homepage", "icon-hand-up") ?></li>
+    <li class="ui-state-default ui-corner-all"><?php echo link_to_ico("icon-hand-left", "@homepage", "icon-hand-left") ?></li>
+    <li class="ui-state-default ui-corner-all"><?php echo link_to_ico("icon-hand-down", "@homepage", "icon-hand-down") ?></li>
+    <li class="ui-state-default ui-corner-all"><?php echo link_to_ico("icon-circle-arrow-right", "@homepage", "icon-circle-arrow-right") ?></li>
+    <li class="ui-state-default ui-corner-all"><?php echo link_to_ico("icon-circle-arrow-up", "@homepage", "icon-circle-arrow-up") ?></li>
+    <li class="ui-state-default ui-corner-all"><?php echo link_to_ico("icon-circle-arrow-left", "@homepage", "icon-circle-arrow-left") ?></li>
+    <li class="ui-state-default ui-corner-all"><?php echo link_to_ico("icon-circle-arrow-down", "@homepage", "icon-circle-arrow-down") ?></li>
+    <li class="ui-state-default ui-corner-all"><?php echo link_to_ico("icon-globe", "@homepage", "icon-globe") ?></li>
+    <li class="ui-state-default ui-corner-all"><?php echo link_to_ico("icon-wrench", "@homepage", "icon-wrench") ?></li>
+    <li class="ui-state-default ui-corner-all"><?php echo link_to_ico("icon-tasks", "@homepage", "icon-tasks") ?></li>
+    <li class="ui-state-default ui-corner-all"><?php echo link_to_ico("icon-filter", "@homepage", "icon-filter") ?></li>
+    <li class="ui-state-default ui-corner-all"><?php echo link_to_ico("icon-briefcase", "@homepage", "icon-briefcase") ?></li>
+    <li class="ui-state-default ui-corner-all"><?php echo link_to_ico("icon-fullscreen", "@homepage", "icon-fullscreen") ?></li>
 </ul>
 
 <br clear="all" />
