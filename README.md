@@ -64,7 +64,7 @@ File-input
 ## LESS
 
 Je conseille l'utilisation d'un compilateur tel que SimpLESS pour l'utilisation du LESS.
-Il est également possible d'utiliser le fichier less-1.3.0.min.js pour la compilation au chargement. Cela sous-entend de lier les fichiers LESS directement dans la balise <head> de layout.php
+Il est également possible d'utiliser le fichier less-1.3.0.min.js pour la compilation au chargement. Cela sous-entend de lier les fichiers LESS directement dans la balise "head" de layout.php
 
 ## Roadmap
 
