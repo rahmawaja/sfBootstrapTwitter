@@ -10,7 +10,7 @@
 http://sfbootstrap.michelparpaillon.com/
  
 ## Plugins
- sfPropelORMPlugin (1.1.2 => Propel 1.6)
+ sfPropelORMPlugin (1.4.1 => Propel branch 1.6)
  
  sfGuardPlugin (4.0.2)
  
@@ -65,3 +65,17 @@ File-input
 
 Je conseille l'utilisation d'un compilateur tel que SimpLESS pour l'utilisation du LESS.
 Il est également possible d'utiliser le fichier less-1.3.0.min.js pour la compilation au chargement. Cela sous-entend de lier les fichiers LESS directement dans la balise <head> de layout.php
+
+## Roadmap
+
+Intégration du isicsBreadcrumbPlugin pour la gestion des Breadcrumbs
+
+Création d'un script simplifiant l'initialisation du projet
+
+Intégrer https://github.com/real-chocopanda/sfTwitterBootstrapPlugin
+
+Amélioration des tris dans les dataTables (ajout des tris pour les colonnes de types HTML et Images)
+
+Intégration de l'excellente collection d'icônes Fugue : http://p.yusukekamiyamane.com/
+
+Création d'un dashboard Drag n Drop personnalisable
