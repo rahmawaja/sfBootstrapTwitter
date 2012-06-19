@@ -32,7 +32,7 @@
  * @package    symfony
  * @subpackage form
  * @author     Fabien Potencier <fabien.potencier@symfony-project.com>
- * @version    SVN: $Id: sfFormLanguage.class.php 30759 2010-08-25 11:48:01Z fabien $
+ * @version    SVN: $Id: sfFormLanguage.class.php 24547 2009-11-30 09:57:41Z fabien $
  */
 class sfFormLanguage extends sfForm
 {
@@ -99,7 +99,7 @@ class sfFormLanguage extends sfForm
   public function configure()
   {
     $this->setValidators(array(
-      'language' => new sfValidatorI18nChoiceLanguage(array('languages' => $this->options['languages'])),
+      'language' => new sfValidatorI18nChoiceLanguage(array('culture' => $this->user->getCulture(), 'languages' => $this->options['languages'])),
     ));
 
     $this->setWidgets(array(

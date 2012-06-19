@@ -17,11 +17,4 @@
  */
 class sfGuardUser extends PluginsfGuardUser
 {
-	public function getEmail(){
-		return $this->getProfile()->getEmail();
-	}
-
-	public function setEmail($email){
-		$this->getProfile()->setEmail($email);
-	}
 }

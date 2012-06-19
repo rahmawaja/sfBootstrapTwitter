@@ -13,7 +13,7 @@
  * @package    symfony
  * @subpackage plugin
  * @author     Gordon Franke <gfranke@savedcite.com>
- * @version    SVN: $Id: BasesfGuardForgotPasswordActions.class.php 31720 2010-12-23 09:18:11Z garak $
+ * @version    SVN: $Id$
  */
 class BasesfGuardForgotPasswordActions extends sfActions
 {

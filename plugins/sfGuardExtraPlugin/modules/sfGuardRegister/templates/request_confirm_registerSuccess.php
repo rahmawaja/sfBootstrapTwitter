@@ -1,2 +1,2 @@
 <?php use_helper('I18N') ?>
-<?php echo __('Votre inscription a été prise en compte, pour la valider veuillez cliquer sur le lien de confirmation présent dans le mail qui vient de vous être envoyé.') ?>
+<?php echo __('Thank you for registering, you must check your e-mail and click the link in the e-mail in order to confirm the validity of your e-mail address.') ?>

@@ -13,7 +13,7 @@
  * @package    symfony
  * @subpackage plugin
  * @author     Gordon Franke <gfranke@savedcite.com>
- * @version    SVN: $Id: sfGuardValidatorUsernameOrEmail.class.php 30765 2010-08-26 13:10:39Z garak $
+ * @version    SVN: $Id$
  */
 class sfGuardValidatorUsernameOrEmail extends sfValidatorBase
 {

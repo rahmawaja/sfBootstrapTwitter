@@ -298,7 +298,14 @@ function jq_remote_function($options)
 	if (isset($options['loading'])) $callback_loading = $options['loading'];
 	if (isset($options['complete'])) $callback_complete = $options['complete'];
 	if (isset($options['success'])) $callback_success = $options['success'];
-
+	
+	if (isset($options['cache'])) { 
+		if($options['cache']){
+			$cache = 'true';
+		} else {
+			$cache = 'false';
+		}
+	}
 	$execute = 'false';
 	if ((isset($options['script'])) && ($options['script'] == '1')) $execute = 'true';
 
@@ -344,6 +351,7 @@ function jq_remote_function($options)
 	$function .= 'type:\''.$method.'\'';
 	$function .= ',dataType:\'' . $dataType . '\'';
 	if (isset($type)) $function .= ',async:'.$type;
+	if (isset($cache)) $function .= ',cache:'.$cache;
 	if (isset($formData)) $function .= ',data:'.$formData;
 	if (isset($update_success) and !isset($callback_success)) $function .= ',success:function(data, textStatus){jQuery(\''.$update_success.'\').'.$updateMethod.'(data);}';
 	if (isset($update_failure)) $function .= ',error:function(XMLHttpRequest, textStatus, errorThrown){'.$update_failure.'}';
@@ -374,7 +382,7 @@ function jq_remote_function($options)
 		}
 	}
 
-	return $function;
+	return $function.( (isset($options['stop_propagation']) && $options['stop_propagation']) ? '; if(event && event.stopPropagation) {event.stopPropagation();} else {window.event.cancelBubble = true;}' : '');
 }
 
 /**
@@ -560,7 +568,7 @@ function jq_submit_image_to_remote($name, $source, $options = array(), $options_
 	}
 
 	$options_html['type'] = 'image';
-	$options_html['onclick'] = jq_remote_function($options).' return false;';
+	$options_html['onclick'] = jq_remote_function($options).'; return false;';
 	$options_html['name'] = $name;
 	$options_html['src'] = image_path($source);
 

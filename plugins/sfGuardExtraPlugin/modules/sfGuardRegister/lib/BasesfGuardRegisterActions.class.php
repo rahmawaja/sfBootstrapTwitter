@@ -13,7 +13,7 @@
  * @package    symfony
  * @subpackage plugin
  * @author     Gordon Franke <gfranke@savedcite.com>
- * @version    SVN: $Id: BasesfGuardRegisterActions.class.php 31653 2010-12-10 14:03:38Z garak $
+ * @version    SVN: $Id$
  */
 class BasesfGuardRegisterActions extends sfActions
 {

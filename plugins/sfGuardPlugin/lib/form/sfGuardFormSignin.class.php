@@ -19,8 +19,5 @@ class sfGuardFormSignin extends BasesfGuardFormSignin
     $this->validatorSchema->setPostValidator(new sfGuardValidatorUser());
 
     $this->widgetSchema->setNameFormat('signin[%s]');
-    
-    $this->widgetSchema['username']->setLabel("Login");
-    $this->widgetSchema['password']->setLabel("Mot de passe");
   }
 }

@@ -1,30 +1,7 @@
-<h1>Inscription</h1>
-<hr>
-<?php include_partial("main/notice", array("form" => $form)) ?>
+<?php use_helper('I18N') ?>
 <form action="<?php echo url_for('@sf_guard_register') ?>" method="post">
-    <?php echo $form['_csrf_token'] ;?>
-    <div class="control-group">
-        <?php echo $form['username']->renderLabel() ?>
-        <?php echo $form['username']->render(array("placeholder" => "Login")) ?>
-        <span class="help-inline"><?php echo $form['username']->renderError() ?></span>
-    </div>
-    <div class="control-group">
-        <?php echo $form['email']->renderLabel() ?>
-        <?php echo $form['email']->render(array("placeholder" => "Email")) ?>
-        <span class="help-inline"><?php echo $form['email']->renderError() ?></span>
-    </div>
-    <div class="control-group">
-        <?php echo $form['password']->renderLabel() ?>
-        <?php echo $form['password']->render(array("placeholder" => "Mot de passe")) ?>
-        <span class="help-inline"><?php echo $form['password']->renderError() ?></span>
-    </div>
-    <div class="control-group">
-        <?php echo $form['password_confirm']->renderLabel() ?>
-        <?php echo $form['password_confirm']->render(array("placeholder" => "Confirmation")) ?>
-        <span class="help-inline"><?php echo $form['password_confirm']->renderError() ?></span>
-    </div>
-    <div class="form-actions">
-        <button type="submit" class="btn btn-primary">Inscription</button>
-        <?php echo link_to("Connexion", "@sf_guard_signin") ?>
-    </div>
+  <table>
+    <?php echo $form ?>
+  </table>
+  <input type="submit" value="<?php echo __('request') ?>" />
 </form>

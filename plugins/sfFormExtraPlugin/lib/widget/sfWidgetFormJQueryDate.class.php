@@ -16,7 +16,7 @@
  * @package    symfony
  * @subpackage widget
  * @author     Fabien Potencier <fabien.potencier@symfony-project.com>
- * @version    SVN: $Id: sfWidgetFormJQueryDate.class.php 30755 2010-08-25 11:14:33Z fabien $
+ * @version    SVN: $Id: sfWidgetFormJQueryDate.class.php 24548 2009-11-30 10:03:16Z fabien $
  */
 class sfWidgetFormJQueryDate extends sfWidgetForm
 {
@@ -62,21 +62,12 @@ class sfWidgetFormJQueryDate extends sfWidgetForm
    */
   public function render($name, $value = null, $attributes = array(), $errors = array())
   {
-    $prefix = str_replace('-', '_', $this->generateId($name));
+    $prefix = $this->generateId($name);
 
     $image = '';
     if (false !== $this->getOption('image'))
     {
       $image = sprintf(', buttonImage: "%s", buttonImageOnly: true', $this->getOption('image'));
-    }
-
-    if ($this->getOption('date_widget') instanceof sfWidgetFormDateTime)
-    {
-      $years = $this->getOption('date_widget')->getDateWidget()->getOption('years');
-    }
-    else
-    {
-      $years = $this->getOption('date_widget')->getOption('years');
     }
 
     return $this->getOption('date_widget')->render($name, $value, $attributes, $errors).
@@ -92,17 +83,14 @@ class sfWidgetFormJQueryDate extends sfWidgetForm
 
   function wfd_%s_update_linked(date)
   {
-    jQuery("#%s").val(parseInt(date.substring(0, 4), 10));
-    jQuery("#%s").val(parseInt(date.substring(5, 7), 10));
-    jQuery("#%s").val(parseInt(date.substring(8), 10));
-
-    wfd_%s_check_linked_days();
+    jQuery("#%s").val(parseInt(date.substring(0, 4)));
+    jQuery("#%s").val(parseInt(date.substring(5, 7)));
+    jQuery("#%s").val(parseInt(date.substring(8)));
   }
 
   function wfd_%s_check_linked_days()
   {
     var daysInMonth = 32 - new Date(jQuery("#%s").val(), jQuery("#%s").val() - 1, 32).getDate();
-
     jQuery("#%s option").attr("disabled", "");
     jQuery("#%s option:gt(" + (%s) +")").attr("disabled", "disabled");
 
@@ -121,7 +109,6 @@ class sfWidgetFormJQueryDate extends sfWidgetForm
       showOn:     "button"
       %s
     }, jQuery.datepicker.regional["%s"], %s, {dateFormat: "yy-mm-dd"}));
-    wfd_%s_check_linked_days();
   });
 
   jQuery("#%s, #%s, #%s").change(wfd_%s_check_linked_days);
@@ -132,15 +119,14 @@ EOF
       $this->generateId($name.'[year]'), $this->generateId($name.'[month]'), $this->generateId($name.'[day]'),
       $prefix,
       $this->generateId($name.'[year]'), $this->generateId($name.'[month]'), $this->generateId($name.'[day]'),
-      $prefix, $prefix,
+      $prefix,
       $this->generateId($name.'[year]'), $this->generateId($name.'[month]'),
       $this->generateId($name.'[day]'), $this->generateId($name.'[day]'),
-      ($this->getOption('date_widget')->getOption('can_be_empty') ? 'daysInMonth' : 'daysInMonth - 1'),
+      ($this->getOption('can_be_empty') ? 'daysInMonth' : 'daysInMonth - 1'),
       $this->generateId($name.'[day]'), $this->generateId($name.'[day]'),
       $id,
-      min($years), max($years),
+      min($this->getOption('date_widget')->getOption('years')), max($this->getOption('date_widget')->getOption('years')),
       $prefix, $prefix, $image, $this->getOption('culture'), $this->getOption('config'),
-      $prefix,
       $this->generateId($name.'[day]'), $this->generateId($name.'[month]'), $this->generateId($name.'[year]'),
       $prefix
     );

@@ -13,7 +13,7 @@
  * @package    symfony
  * @subpackage plugin
  * @author     Gordon Franke <gfranke@savedcite.com>
- * @version    SVN: $Id: sfGuardExtraRouting.class.php 31704 2010-12-21 14:29:12Z garak $
+ * @version    SVN: $Id$
  */
 class sfGuardExtraRouting
 {

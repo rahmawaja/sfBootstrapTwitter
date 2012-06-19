@@ -1,2 +1,2 @@
 <?php use_helper('I18N') ?>
-<?php echo __('Vous avez validé votre inscription avec succès.') ?>
+<?php echo __('You have successfully completed your registration.') ?>
