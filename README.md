@@ -47,8 +47,8 @@ Cherchez ensuite via votre IDE la chaîne "@EDIT". Celle-ci pointe tous les cham
 
 ## sfHtml5FormPlugin
 
-Ce plugin apporte un certain nombre de widgets HTML5 supplémentaires. Le fallback de ces widgets étant parfaitement propre, aucune de s'en priver.
-Certains widgets tels que les types date, time ou email sont d'autant plus agréables sur smartphone (l'iPhone propose automatiquement les claviers adaptés...)
+Ce plugin apporte un certain nombre de widgets HTML5 supplémentaires. Le fallback de ces widgets étant propre sur tous les navigateurs, aucune raison de s'en priver.
+Certains widgets tels que les types date, time ou email seront interpretés différemment sur certains smartphones tels que l'iPhone (Clavier spécifique pour la date, la durée, etc)
 
 ## Connexion
 
