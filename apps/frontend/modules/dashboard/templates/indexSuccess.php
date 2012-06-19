@@ -47,28 +47,4 @@
     <div class="span4 offset4">4 offset 4</div>
 </div>
 
-<div class="page-header">
-    <h1>Description/Listes</h1>
-</div>
-
-<div class="row-fluid">
-    <div class="span6">
-        <dl>
-            <dt>Description lists</dt>
-            <dd>A description list is perfect for defining terms.</dd>
-            <dt>Euismod</dt>
-            <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
-        </dl>
-    </div>
-    <div class="span6">
-        <dl class="dl-horizontal">
-            <dt>Description lists</dt>
-            <dd>A description list is perfect for defining terms.</dd>
-            <dt>Euismod</dt>
-            <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
-            <dd>Donec id elit non mi porta gravida at eget metus.</dd>
-        </dl>
-    </div>
-</div>
-
 
