@@ -7,7 +7,7 @@ propel:
     _attributes: { phpName: sfGuardUserProfile }
     id:                      ~
     user_id:                 { type: integer, foreignTable: sf_guard_user, foreignReference: id, required: true, onDelete: cascade }
-    genre:                   { type: integer }
+    gender:                  { type: integer }
     first_name:              { type: varchar(45) }
     last_name:               { type: varchar(45) }
     email:                   { type: varchar(100), index: unique }

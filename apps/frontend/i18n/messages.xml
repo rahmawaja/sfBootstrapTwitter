@@ -182,8 +182,8 @@
         <target>Les deux mots de passe doivent être identiques.</target>
       </trans-unit>
       <trans-unit>
-        <source><![CDATA[An object with the same "%column%" already exist.]]></source>
-        <target><![CDATA[Cet email est déjà attaché à un compte.]]></target>
+        <source><![CDATA[An object with the same "%column"%" already exist.]]></source>
+        <target><![CDATA[Un objet possédant le même "%column"%" existe déjà.]]></target>
       </trans-unit>
       <trans-unit>
         <source><![CDATA[from %from_date% to %to_date%]]></source>

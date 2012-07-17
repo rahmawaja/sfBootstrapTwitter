@@ -13,11 +13,12 @@ CREATE TABLE `sf_guard_user_profile`
 (
 	`id` INTEGER NOT NULL AUTO_INCREMENT,
 	`user_id` INTEGER NOT NULL,
-	`genre` INTEGER,
+	`gender` INTEGER,
 	`first_name` VARCHAR(45),
 	`last_name` VARCHAR(45),
 	`email` VARCHAR(100),
 	PRIMARY KEY (`id`),
+	UNIQUE INDEX `sf_guard_user_profile_U_1` (`email`),
 	INDEX `sf_guard_user_profile_FI_1` (`user_id`),
 	CONSTRAINT `sf_guard_user_profile_FK_1`
 		FOREIGN KEY (`user_id`)
