@@ -4,9 +4,12 @@ $(document).ready(function(){
     
     // Popover
     $("[rel=popover]").popover({
-        offset: 10,
-        placement: "right"
+        trigger: "hover"
     });
+
+    $("[rel=loading]").on('click', function () {
+        $(this).button('loading');
+    })
 	
     // Input file
     $('.input-file').customFileInput({

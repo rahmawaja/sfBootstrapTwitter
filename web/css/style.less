@@ -1,43 +1,155 @@
 @import "twitter/variables.less";
 @import "twitter/mixins.less";
+@import "utilities.less";
 
 @import "demo.less"; // @EDIT
 
-.corps{
-	padding-top: 50px;
+.form-tight {
+    .control-group {
+        margin-bottom: 0;
+    }
 }
 
-@media (max-width: 980px) {
-	.corps{
-		padding-top: 0;
-	}
+.form-actions {
+    margin-top: 5px;
 }
 
-.clear{
-    clear: both;
+select[name$="[day]"],
+select[name$="[month]"],
+select[name$="[year]"] {
+    width: 70px;
+}
+
+.control-group {
+    textarea {
+        width: 95%;
+    }
+}
+
+.alert {
+    &.alert-success {
+        a {
+            color: darken(@successText, 10%);
+        }
+    }
+
+    &.alert-info {
+        a {
+            color: darken(@infoText, 10%);
+        }
+    }
+
+    &.alert-danger {
+        a {
+            color: darken(@errorText, 10%);
+        }
+    }
+}
+
+.table-striped tbody tr:nth-child(odd) td, .table-striped tbody tr:nth-child(odd) th {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+.table tbody tr:hover td, .table tbody tr:hover th {
+    background-color: white;
+}
+.table.no-hover tbody tr:hover td, .table tbody tr:hover th {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.table.table-dark {
+    tbody {
+        tr {
+            td, th {
+                background-color: rgba(255, 255, 255, 0.15);
+            }
+        }
+        tr:nth-child(odd) td, tbody tr:nth-child(odd) th {
+            background-color: rgba(255, 255, 255, 0.23);
+        }
+
+        tr:hover td, tr:hover th {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+    }
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+.text_filter{
+    width: 150px;
+}
+
+input.number_range_filter{
+    width: 30px;
+
+    &:first-child{
+        margin-right: 5px;
+    }
+}
+
+input.date_range_filter{
+    width: 80px;
+
+    &:first-child{
+        margin-right: 5px;
+    }
+}
+
+.table th, .table td {
+    vertical-align: middle;
+
+    &.center{
+        text-align: center;
+    }
+
+    .icons-group{
+        margin-left: 8px;
+    }
+}
+
+
+div, a, textarea {
+    .box-sizing(border-box);
+}
+
+input[type=text],input[type=password]  {
+    .box-sizing(border-box);
+    height: 30px;
+}
+
+textarea{
+    resize: none;
+}
+
+.img-file{
+    margin-bottom: 5px;
+    max-width: 150px;
 }
 
 .icons-group{
     display: block;
     margin: 0;
-   
+
     li{
         margin: 2px;
         position: relative;
         float: left;
         list-style: none;
-       
+
         a{
             display: block;
             padding: 4px;
-            
+
             i{
                 padding-right: 1px;
                 vertical-align: text-top;
                 margin-left: 1px;
             }
         }
-            
+
         &.disabled{
             cursor: default;
             background-image: none;
@@ -50,112 +162,120 @@
 /* Datatables Twitter */
 
 .dataTables_wrapper{
-	.row{
-		margin: 0;
-	}
-	
-	.dataTables_length{
-		label {
-			float: left;
-			text-align: left;
-		}
-		
-		select {
-			display: inline;
-			width: 75px;
-		}
-	}
-	
-	.dataTables_filter {
-		label{
-			float: right;
-			margin: 0;
-		}
-		
-		input{
-			display: inline; 
-			margin: 0;
-		}
-	}
-	
-	.dataTables_info{
-		float: left;
-	}
-	
-	.dataTables_paginate {
-		float: right;
-		margin: 0;
-	}
-	
-	.paginate_disabled_previous, .paginate_disabled_next{
-		cursor: default;
-		margin-right: 10px;
-		opacity: 0.4;
-		
-		&:hover{
-			color: #0069D6;
-			text-decoration: none;
-		}
-	}
-	
-	.paginate_enabled_previous, .paginate_enabled_next{
-		cursor: pointer;
-		margin-right: 10px;
-	}
-	
-	table {
-		clear: both;
-		margin: 0 0 1em;
-		width: 100%;
-		
-		&.bordered{
-			border: 1px solid #DDD;
-		}
-		
-		thead{
-		 	input, select{
-				margin-bottom: 0;
-			}
-		}
-		
-		.header{
-			border-bottom: 1px solid #CCC;
-		}
-		
-		.headerSortUp, .headerSortDown{
-			background: rgba(141, 192, 219, 0.25);
-			position: relative;
-			text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
-			
-			&:after{
-				.square(14px);
-				background: url('img/glyphicons-halflings.png');
-				content: "";
-				position: absolute;
-				right: 5px;
-				top: 10px;
-			}
-		}
-		
-		.headerSortUp:after{
-			background-position: -288px -120px;
-		}
-		
-		.headerSortDown:after{
-			background-position: -313px -119px;
-		} 
-	}
+    .row{
+        margin: 0;
+    }
+
+    .dataTables_length{
+        label {
+            float: left;
+            text-align: left;
+        }
+
+        select {
+            display: inline;
+            width: 75px;
+        }
+    }
+
+    .dataTables_filter {
+        label{
+            float: right;
+            margin: 0;
+        }
+
+        input{
+            display: inline;
+            margin: 0;
+        }
+    }
+
+    .dataTables_info{
+        float: left;
+    }
+
+    .dataTables_paginate {
+        float: right;
+        margin: 0;
+    }
+
+    .paginate_disabled_previous, .paginate_disabled_next{
+        cursor: default;
+        margin-right: 10px;
+        opacity: 0.4;
+
+        &:hover{
+            color: #0069D6;
+            text-decoration: none;
+        }
+    }
+
+    .paginate_enabled_previous, .paginate_enabled_next{
+        cursor: pointer;
+        margin-right: 10px;
+    }
+
+    table {
+        clear: both;
+        margin: 0 0 1em;
+        width: 100%;
+
+        &.bordered{
+            border: 1px solid #DDD;
+        }
+
+        thead{
+            input, select{
+                margin-bottom: 0;
+            }
+        }
+
+        .header{
+            border-bottom: 1px solid #CCC;
+        }
+
+        .headerSortUp, .headerSortDown{
+            background: rgba(154, 202, 202, 0.25);
+            position: relative;
+            text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+
+            &:after{
+                .square(14px);
+                background: url('img/glyphicons-halflings.png');
+                content: "";
+                position: absolute;
+                right: 5px;
+                top: 10px;
+            }
+        }
+
+        &.table-dark {
+            .headerSortUp, .headerSortDown{
+                background: rgba(255, 255, 255, 0.5);
+            }
+        }
+
+        .headerSortUp:after{
+            background-position: -288px -120px;
+        }
+
+        .headerSortDown:after{
+            background-position: -313px -119px;
+        }
+    }
 }
 
 .accordion-toggle{
-	&:hover{
-		color: #08C;
-		text-decoration: none;
-	}
+    &:hover{
+        color: #08C;
+        text-decoration: none;
+    }
 }
 
 .input-file{
     background-color: white;
+    height: 20px;
+    line-height: 20px;
 }
 
 .page-header {
@@ -163,6 +283,6 @@
 }
 
 .error_list{
-      list-style: none;
-      margin: 0;
+    list-style: none;
+    margin-left: 0;
 }

@@ -6,8 +6,8 @@
     <body>
       <!-- Actions -->
       <trans-unit>
-		<source>You don't have the required permission to access this page.</source>
-		<target>Vous n'avez pas les droits nécessaires pour effectuer cette action.</target>
+        <source>You don't have the required permission to access this page.</source>
+        <target>Vous n'avez pas les droits nécessaires pour effectuer cette action.</target>
       </trans-unit>
       <trans-unit>
         <source>New</source>
@@ -114,6 +114,42 @@
 
       <!-- Form -->
       <trans-unit>
+        <source>Username</source>
+        <target>Nom d'utilisateur</target>
+      </trans-unit>
+      <trans-unit>
+        <source>The username and/or password is invalid.</source>
+        <target>Le nom d'utilisateur et/ou le mot de passe est invalide.</target>
+      </trans-unit>
+      <trans-unit>
+        <source><![CDATA["%value%" is not an integer.]]></source>
+        <target><![CDATA["%value%" n'est pas un nombre.]]></target>
+      </trans-unit>
+      <trans-unit>
+        <source>Username or email</source>
+        <target>Nom d'utilisateur ou Email</target>
+      </trans-unit>
+      <trans-unit>
+        <source>First name</source>
+        <target>Prénom</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Last name</source>
+        <target>Nom</target>
+      </trans-unit>
+      <trans-unit>
+        <source>University</source>
+        <target>Université</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Password</source>
+        <target>Mot de passe</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Password again</source>
+        <target>Confirmer le mot de passe</target>
+      </trans-unit>
+      <trans-unit>
         <source>The item was created successfully.</source>
         <target>L'objet a été ajouté avec succès.</target>
       </trans-unit>
@@ -175,15 +211,19 @@
       </trans-unit>
       <trans-unit>
         <source>Required.</source>
-        <target>Champs requis.</target>
+        <target>Ce champs est requis.</target>
+      </trans-unit>
+      <trans-unit>
+        <source>The captcha is not valid (%error%).</source>
+        <target>Le captcha est invalide.</target>
       </trans-unit>
       <trans-unit>
         <source>The two passwords must be the same.</source>
         <target>Les deux mots de passe doivent être identiques.</target>
       </trans-unit>
       <trans-unit>
-        <source><![CDATA[An object with the same "%column"%" already exist.]]></source>
-        <target><![CDATA[Un objet possédant le même "%column"%" existe déjà.]]></target>
+        <source><![CDATA[An object with the same "%column%" already exist.]]></source>
+        <target><![CDATA[Un autre objet du même type existe déjà]]></target>
       </trans-unit>
       <trans-unit>
         <source><![CDATA[from %from_date% to %to_date%]]></source>

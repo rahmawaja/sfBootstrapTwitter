@@ -9,13 +9,15 @@ default:
 
   stylesheets:
     - twitter/bootstrap.css
+    - twitter/responsive.css
     - jq-theme/jquery-ui-1.8.16.custom.css
     - file-input/enhanced.css
     - style.css
     
   javascripts:
-    - jq-theme/jquery-ui-1.8.16.custom.min.js
+    - jq-theme/jquery-ui-1.8.23.custom.min.js
     - twitter/bootstrap-transition.js
+    - twitter/bootstrap-affix.js
     - twitter/bootstrap-alert.js
     - twitter/bootstrap-button.js
     - twitter/bootstrap-collapse.js

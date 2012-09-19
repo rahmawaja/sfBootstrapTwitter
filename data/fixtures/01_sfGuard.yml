@@ -35,49 +35,49 @@ sfGuardUser:
 sfGuardUserProfile: 
   sgu_admin_profile: 
     user_id: sgu_administrateur
-    genre: 0
+    gender: 0
     first_name: Admin
     last_name: Admin
     email: admin@symfony-bootstrap.com
   sgu_ludovic_profile: 
     user_id: sgu_ludovic
-    genre: 0
+    gender: 0
     first_name: Ludovic
     last_name: Meyer
     email: ludovic@symfony-bootstrap.com
   sgu_benjamin_profile: 
     user_id: sgu_benjamin
-    genre: 0
+    gender: 0
     first_name: Benjamin
     last_name: Viaud
     email: benjamin@symfony-bootstrap.com
   sgu_eymeric_profile: 
     user_id: sgu_eymeric
-    genre: 0
+    gender: 0
     first_name: Eymeric
     last_name: Taelman
     email: eymeric@symfony-bootstrap.com
   sgu_michel_profile: 
     user_id: sgu_michel
-    genre: 0
+    gender: 0
     first_name: Michel
     last_name: Parpaillon
     email: michel@symfony-bootstrap.com
   sgu_nicolas_profile: 
     user_id: sgu_nicolas
-    genre: 0
+    gender: 0
     first_name: Nicolas
     last_name: Dufreche
     email: nicolas@symfony-bootstrap.com
   sgu_colin_profile: 
     user_id: sgu_colin
-    genre: 0
+    gender: 0
     first_name: Colin
     last_name: Bellino
     email: colin@symfony-bootstrap.com
   sgu_jeremie_profile: 
     user_id: sgu_jeremie
-    genre: 0
+    gender: 0
     first_name: Jeremie
     last_name: Augustin
     email: jeremie@symfony-bootstrap.com

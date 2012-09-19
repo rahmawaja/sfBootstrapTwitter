@@ -1,6 +1,6 @@
 prod:
   .settings:
-    no_script_name:         true   # Pas de frontend_dev.php dans l'url
+    no_script_name:         true   # Pas de frontend.php dans l'url
     logging_enabled:        false  # Absence de log pour petit gain de performance
 
 dev:
@@ -29,11 +29,11 @@ all:
     use_database:           true
     
     # load Jquery core
-    jquery_core:            jquery-1.7.1.min.js
+    jquery_core:            jquery-1.8.1.min.js
     jquery_web_dir:         /sfJqueryReloadedPlugin
     
     enabled_modules:        [default, sfGuardAuth, sfGuardRegister, sfGuardForgotPassword]
-    standard_helpers:       [Partial, jQuery, Date, LinkToIco]
+    standard_helpers:       [Partial, I18N, jQuery, Date, LinkToIco]
     
     charset:                utf-8
     

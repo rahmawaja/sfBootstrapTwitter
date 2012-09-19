@@ -93,6 +93,14 @@
 
 <hr>
 
+<p class="muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+<p class="text-warning">Etiam porta sem malesuada magna mollis euismod.</p>
+<p class="text-error">Donec ullamcorper nulla non metus auctor fringilla.</p>
+<p class="text-info">Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis.</p>
+<p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+
+<hr>
+
 <div class="page-header">
     <h1>Form Symfony et gestion d'erreurs</h1>
 </div>
@@ -166,8 +174,19 @@
 <button class="btn btn-info">.btn-info</button>
 <button class="btn btn-inverse">.btn-inverse</button>
 
-<br clear="all" />
-<br clear="all" />
+<button type="button" class="btn" rel="loading" data-loading-text="Loading...">Loading state</button>
+<button type="button" class="btn" data-toggle="button">Single Toggle</button>
+<br />
+<br />
+<button class="btn btn-large btn-block" type="button">Block level button</button>
+
+<div class="page-header">
+    <h1>Images</h1>
+</div>
+
+<img src="http://www.placehold.it/140x140" class="img-rounded">
+<img src="http://www.placehold.it/140x140" class="img-circle">
+<img src="http://www.placehold.it/140x140" class="img-polaroid">
 
 <div class="page-header">
     <h1>Labels</h1>

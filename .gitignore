@@ -1,9 +1,10 @@
 /.buildpath
 /.project
 /.settings
-/b.bat
-/c.bat
-/d.bat
-/apps/frontend/config/factories.yml
 /cache
 /log
+/web/uploads/profile/
+/web/frontend_dev.php
+/data/vhost.txt
+/config/propel.ini
+/lib/vendor/symfony/lib/task/generator/skeleton/app/app/lib/.sf/

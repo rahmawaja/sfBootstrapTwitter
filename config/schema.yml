@@ -11,3 +11,4 @@ propel:
     first_name:              { type: varchar(45) }
     last_name:               { type: varchar(45) }
     email:                   { type: varchar(100), index: unique }
+    image_path:              { type: varchar(255) }

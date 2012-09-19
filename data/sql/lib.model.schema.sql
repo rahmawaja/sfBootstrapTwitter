@@ -17,6 +17,7 @@ CREATE TABLE `sf_guard_user_profile`
 	`first_name` VARCHAR(45),
 	`last_name` VARCHAR(45),
 	`email` VARCHAR(100),
+	`image_path` VARCHAR(255),
 	PRIMARY KEY (`id`),
 	UNIQUE INDEX `sf_guard_user_profile_U_1` (`email`),
 	INDEX `sf_guard_user_profile_FI_1` (`user_id`),

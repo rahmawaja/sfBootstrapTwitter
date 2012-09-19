@@ -12,10 +12,9 @@ all:
     class: sfPropelDatabase
     param:
       classname: PropelPDO
-      dsn: 'mysql:host=localhost;dbname=sfBootstrap' # @EDIT
-      username: sfBootstrap  # @EDIT
+      dsn: 'mysql:host=localhost;dbname=sfbootstrap' # @EDIT
+      username: sfbootstrap  # @EDIT
       password: null
-      encoding: # On laisse l'encodage vide pour les versions de PHP inférieures à 5.3.6, pour les version supérieures mettre utf8 @EDIT
+      encoding: utf8
       persistent: true
       pooling: true
-      queries: { value: 'SET NAMES UTF8;' }

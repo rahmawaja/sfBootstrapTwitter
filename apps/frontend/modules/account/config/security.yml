@@ -1,0 +1,8 @@
+register:
+  is_secure: false
+
+show:
+  is_secure: true
+
+edit:
+  is_secure: true

@@ -6,6 +6,16 @@ icon:
   url: /icones
   param: { module: dashboard, action: icon }
   
+## User routes ##
+
+user_profile:
+  url: /mon-compte
+  param: { module: account, action: show }
+
+user_edit:
+  url: /mon-compte/edition
+  param: { module: account, action: edit }
+
 ## Default routes ##
 
 sf_guard_signout:

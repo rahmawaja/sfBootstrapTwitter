@@ -20,6 +20,7 @@ abstract class BasesfGuardUserProfileForm extends BaseFormPropel
       'first_name' => new sfWidgetFormInputText(),
       'last_name'  => new sfWidgetFormInputText(),
       'email'      => new sfWidgetFormInputText(),
+      'image_path' => new sfWidgetFormInputText(),
     ));
 
     $this->setValidators(array(
@@ -29,6 +30,7 @@ abstract class BasesfGuardUserProfileForm extends BaseFormPropel
       'first_name' => new sfValidatorString(array('max_length' => 45, 'required' => false)),
       'last_name'  => new sfValidatorString(array('max_length' => 45, 'required' => false)),
       'email'      => new sfValidatorString(array('max_length' => 100, 'required' => false)),
+      'image_path' => new sfValidatorString(array('max_length' => 255, 'required' => false)),
     ));
 
     $this->validatorSchema->setPostValidator(
